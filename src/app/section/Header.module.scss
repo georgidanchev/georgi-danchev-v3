@@ -1,0 +1,25 @@
+.header {
+  left: 0;
+  padding-top: 25px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 6;
+
+    @media only screen and (max-width: 589px)  {
+      padding-top: 15px;
+    }
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+}

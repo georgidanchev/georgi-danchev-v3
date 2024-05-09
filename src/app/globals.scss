@@ -1,0 +1,138 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #c6c6c6;
+  --color-gray-2: #666a8f;
+  --color-gray-3: #2d314c;
+  --color-gray-4: #23263e;
+  --color-primary: #181a29;
+  --color-secondary: #ffb53e;
+  --color-secondary-2: #ffc576;
+  --color-danger: rgba(255, 14, 14, 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.section-width {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 80px;
+  padding-left: 80px;
+  max-width: 1360px;
+  width: 100%;
+
+  & .animate__hidden {
+    transition: 100ms opacity;
+    opacity: 0;
+  }
+
+  & .animate__fadeIn {
+    opacity: 1;
+  }
+
+  @media only screen and (max-width:1400px)  {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media only screen and (max-width:1140px)  {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @media only screen and (max-width:590px)  {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  &--padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media only screen and (max-width:769px)  {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &--bordered-top {
+    padding-top: 200px;
+
+    @media only screen and (max-width:960px)  {
+      padding-top: 150px;
+    }
+
+    @media only screen and (max-width:590px)  {
+      padding-top: 100px;
+    }
+  }
+
+  &--bordered-bottom {
+    padding-bottom: 200px;
+
+    @media only screen and (max-width: 960px)  {
+      padding-bottom: 150px;
+    }
+
+    @media only screen and (max-width: 590px)  {
+      padding-bottom: 100px;
+    }
+  }
+}
+
+
+.website-wrapper {
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section {
+  scroll-snap-align: start;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}

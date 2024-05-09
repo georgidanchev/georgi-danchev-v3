@@ -1,11 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base'; @import 'tailwindcss/components'; @import 'tailwindcss/utilities';
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #c6c6c6;
+  --color-gray-2: #666a8f;
+  --color-gray-3: #2d314c;
+  --color-gray-4: #23263e;
+  --color-primary: #181a29;
+  --color-secondary: #ffb53e;
+  --color-secondary-2: #ffc576;
+  --color-danger: rgba(255, 14, 14, 0.7);
 }
 
 @media (prefers-color-scheme: dark) {

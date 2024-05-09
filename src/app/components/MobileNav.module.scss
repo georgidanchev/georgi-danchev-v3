@@ -1,0 +1,54 @@
+.mobileNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  position: fixed;
+  z-index: 7;
+  top: 100px;
+  right: 0;
+  left: 0;
+  opacity: 0;
+
+  height: calc(100vh - 100px);
+  width: 100vw;
+  bottom: 100px;
+
+  transition: transform 200ms 300ms ease, opacity 300ms 200ms;
+  transform: translate(50%, -60%) scale(0);
+
+  @include media("<mobile-large") {
+    transform: translate(35%, -50%) scale(0);
+  }
+
+  &.active {
+    transform: translate(0, 0%) scale(1);
+    transition: transform 500ms 300ms ease, opacity 300ms 300ms;
+    opacity: 1;
+  }
+
+  &__link {
+    @include fluid-type(1400px, 1600px, 30px, 55px);
+    color: var(--color-white);
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.777;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding-right: 30px;
+    padding-left: 30px;
+    border: none;
+
+    &.active {
+      color: var(--color-secondary-2);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-secondary);
+    }
+  }
+}

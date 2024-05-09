@@ -1,0 +1,24 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list-item:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &:hover svg,
+    &:focus svg {
+      stroke: var(--color-secondary);
+    }
+  }
+
+  &__icon {
+    transition: stroke 300ms ease;
+  }
+}
