@@ -7,6 +7,7 @@ import DownArrow from "../components/DownArrow"
 // import { useCallback } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
 // import useIntersection from "../helpers/useIntersection"
+import classes from "./sections"
 
 const Home = () => {
   const {
@@ -24,7 +25,7 @@ const Home = () => {
   // }, [])
 
   return (
-    <section id="home" className="section section--hero" data-scroll-section>
+    <section id="home" className={`${classes.section} ${classes["section--her"]}`} data-scroll-section>
       <div
         className="section-width section-width--padding home-section animate__animated animate__zoomInDown"
         data-scroll
@@ -45,14 +46,14 @@ const Home = () => {
       </div>
 
       <div className="section__bg-image-wrapper home">
-        <ResponsiveImage
+        {/* <ResponsiveImage
           image_class="section__bg-image"
           code="v1629540939"
           public_id="hero_rzr91t"
           alt="Laptop sitting on a desk"
           width="420"
           height="900"
-        />
+        /> */}
       </div>
 
       {/* <Particles id="tsparticles" options={particleConfig} init={particlesInit} /> */}
