@@ -1,3 +1,5 @@
+@import "../../../mixin/shared";
+
 .nameTitle {
   display: flex;
   justify-content: center;
@@ -18,8 +20,8 @@
   }
 }
 
-.nameTitle__inner {
-  @media only screen and (max-width: 767px) {
+.header .nameTitle__inner {
+  @include media("<tablet") {
     width: 25px;
     overflow: hidden;
     display: inline-block;
@@ -34,8 +36,8 @@
   }
 }
 
-.nameTitle--footer {
-  @media only screen and (max-width: 767px) {
+.footer .nameTitle {
+  @include media("<tablet") {
     margin-bottom: 17px;
   }
 }

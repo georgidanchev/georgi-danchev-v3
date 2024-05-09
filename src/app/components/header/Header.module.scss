@@ -1,3 +1,5 @@
+@import "../../../mixin/shared";
+
 .header {
   left: 0;
   padding-top: 25px;
@@ -6,7 +8,7 @@
   top: 0;
   z-index: 6;
 
-    @media only screen and (max-width: 589px)  {
+    @include media("<mobile-large") {
       padding-top: 15px;
     }
 

@@ -1,7 +1,7 @@
-import NameTitle from "../components/NameTitle"
-import MobileBtn from "../components/MobileBtn"
-import MobileNav from "../components/MobileNav"
-import SocialLinks from '../components/SocialLinks';
+import NameTitle from "./NameTitle"
+import MobileBtn from "./MobileBtn"
+import MobileNav from "./MobileNav"
+import SocialLinks from './SocialLinks';
 
 import classes from "./Header.module.scss"
 
@@ -17,7 +17,7 @@ const Header = () => {
           <MobileBtn />
         </div>
       </div>
-      {/* <MobileNav /> */}
+      <MobileNav />
     </header>
   )
 }

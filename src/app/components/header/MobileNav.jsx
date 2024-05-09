@@ -4,6 +4,10 @@
 // import { setCurrentSection } from "../redux/navReducer"
 // import { useSelector, useDispatch } from "react-redux"
 
+import classes from "./MobileNav.module.scss"
+
+const allSections = ["home", "about", "projects", "blog", "contact"]
+
 
 const MobileNav = () => {
   // const { allSections } = useSelector((state) => state.nav)
@@ -25,10 +29,10 @@ const MobileNav = () => {
   }
 
   const allNavs = allSections.map((nav, index) => (
-    <li className="mobileNav__list-item" key={nav}>
+    <li className={classes["mobileNav__list-item"]} key={nav}>
       <button
         data-target={`${index}`}
-        className={`mobileNav__link ${nav === sectionInView ? "active" : ""}`}
+        // className={`mobileNav__link ${nav === sectionInView ? "active" : ""}`}
         onClick={(e) => handleClick(e, nav)}
         type="button"
       >
@@ -41,8 +45,8 @@ const MobileNav = () => {
   ))
 
   return (
-    <div className={isMenuOpen ? "section-width mobileNav active" : "section-width mobileNav"}>
-      <ul className="mobileNav__list">{allNavs}</ul>
+    <div className={`${classes.mobileNav} section-width`}>
+      <ul className={classes["mobileNav__list"]}>{allNavs}</ul>
     </div>
   )
 }
