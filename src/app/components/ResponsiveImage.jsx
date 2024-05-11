@@ -4,7 +4,7 @@ const responsiveImage = (props) => {
   const { alt, public_id, code, image_class, height, width } = props
 
   return (
-    <Image
+    <img
       className={`${image_class} lazyload`}
       data-sizes="auto"
       src={`https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_900,f_auto/${code}/${public_id}.webp`}

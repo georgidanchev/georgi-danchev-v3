@@ -56,7 +56,7 @@ const DownArrow = () => {
         data-scroll-repeat="false"
         data-scroll-class="animate__fadeIn"
         src={arrowDownSvg}
-        alt=""
+        alt="Down arrow image"
       />
     </StyledDownArrow>
   )
