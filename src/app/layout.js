@@ -1,5 +1,5 @@
 // import { Inter } from "nee={inter.classNxt/font/google";
-import "./globals.scss"
+import "./styles/globals.scss"
 
 // const inter = Inter({ subsets: ["latin"] });
 
