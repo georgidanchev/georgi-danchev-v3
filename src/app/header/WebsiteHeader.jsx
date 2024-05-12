@@ -2,15 +2,14 @@ import NameTitle from "./NameTitle"
 import MobileBtn from "./MobileBtn"
 import MobileNav from "./MobileNav"
 import SocialLinks from './SocialLinks';
+import classes from "./WebsiteHeader.module.scss"
+import sectClasses from "../styles/shared/Sections.module.scss"
 
-import classes from "./Header.module.scss"
-
-const { REACT_APP_LINKEDIN, REACT_APP_GITHUB } = process.env
 
 const Header = () => {
   return (
     <header className={classes.header}>
-      <div className={`${classes["header__container"]} section-width animate__animated animate__fadeIn animate__delay-1s`}>
+      <div className={`${classes["header__container"]} ${sectClasses["section-width"]} animate__animated animate__fadeIn animate__delay-1s`}>
         <NameTitle />
         <div className={classes["header__inner"]}>
           <SocialLinks />

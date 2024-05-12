@@ -2,35 +2,36 @@
 
 import DecorativeBorder from "../components/DecorativeBorder"
 import ResponsiveImage from "../components/ResponsiveImage"
-import DownArrow from "../components/DownArrow"
-import classes from "./HomeSection.module.scss"
+import DownArrowLink from "../components/DownArrowLink"
+import homeClasses from "./HomeSection.module.scss"
+import sectClasses from "../styles/shared/Sections.module.scss"
 
 const Home = () => {
   return (
-    <section id="home" className="section" data-scroll-section>
+    <section id="home" className={sectClasses["section"]} data-scroll-section>
       <div
-        className={`${classes["home-section"]} section-width section-width--padding animate__animated animate__zoomInDown`}
+        className={`${homeClasses["home-section"]} ${sectClasses["section-width"]} ${sectClasses["section-width--padding"]} animate__animated animate__zoomInDown`}
         data-scroll
         data-scroll-repeat="true"
         data-scroll-offset="50%,50%"
         data-scroll-call="home"
       >
-        <h1 className={`${classes["home-section__title"]}`}>
-          <span className={`${classes["home-section__title-inner"]} ${classes["home-section__title-inner--first"]}`}>
+        <h1 className={`${homeClasses["home-section__title"]}`}>
+          <span className={`${homeClasses["home-section__title-inner"]} ${homeClasses["home-section__title-inner--first"]}`}>
             Georgi Danchev
           </span>
-          <span className={`${classes["home-section__title-spacer"]}`}>|</span>
-          <span className={`${classes["home-section__title-inner"]} ${classes["home-section__title-inner--second"]}`}>
+          <span className={`${homeClasses["home-section__title-spacer"]}`}>|</span>
+          <span className={`${homeClasses["home-section__title-inner"]} ${homeClasses["home-section__title-inner--second"]}`}>
             Front End Developer
           </span>
         </h1>
 
-        <p className={`${classes["home-section__text"]}`}>I code beautiful, simple and high quality websites</p>
+        <p className={`${homeClasses["home-section__text"]}`}>I code beautiful, simple and high quality websites</p>
       </div>
 
-      <div className="section__bg-image-wrapper home">
+      <div className={`${sectClasses["section__bg-image-wrapper"]} ${sectClasses["section__bg-image-wrapper--home"]}`}>
         <ResponsiveImage
-          image_class="section__bg-image"
+          image_class={sectClasses["section__bg-image"]}
           code="v1629540939"
           public_id="hero_rzr91t"
           alt="Laptop sitting on a desk"
@@ -41,7 +42,7 @@ const Home = () => {
 
       {/* <Particles id="tsparticles" options={particleConfig} init={particlesInit} /> */}
 
-      <DownArrow />
+      <DownArrowLink />
 
       <DecorativeBorder location="bottom" />
     </section>

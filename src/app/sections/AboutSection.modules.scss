@@ -1,0 +1,112 @@
+@import "../styles/mixin/shared.scss";
+
+.about {
+  text-align: center;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    @include media("<desktop-large") {
+      flex-direction: column;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    margin: 25px;
+
+    @include media("<tablet") {
+      margin: 25px 50px;
+    }
+
+    @include media("<desktop-large") {
+      align-self: center;
+    }
+
+    &:after {
+      background-color: var(--color-white);
+      opacity: 0.24;
+      border-radius: 8px;
+      transform: rotate(-6deg);
+
+      display: block;
+      content: "";
+      border-radius: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      height: 264px;
+      width: 264px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    @include media(">=desktop-large") {
+      margin-left: 100px;
+      max-width: 600px;
+    }
+
+    @include media("<desktop-large") {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: 0 30%;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__text {
+    @include fluid-type(500px, 1600px, 18px, 30px);
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: justify;
+
+    @include media("<desktop-large") {
+      max-width: 700px;
+    }
+  }
+
+  &__link {
+    margin-top: 60px;
+
+    @include media("<desktop-large") {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 45px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 90px;
+    text-align: center;
+  }
+
+  &__skill-charts {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+
+    @include media("<tablet") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

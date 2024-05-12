@@ -1,4 +1,4 @@
-import { Image } from 'next/image';
+import "lazysizes"
 
 const responsiveImage = (props) => {
   const { alt, public_id, code, image_class, height, width } = props
