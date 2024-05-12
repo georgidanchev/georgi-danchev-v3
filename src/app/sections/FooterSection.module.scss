@@ -1,0 +1,54 @@
+@import "../styles/shared/Sections.module.scss";
+
+.footer {
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  width: 100vw;
+  left: 50%;
+  background-color: var(--color-primary);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+
+  @include media("<tablet") {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.nameTitle {
+  @include media(">=tablet") {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  @include media("<tablet") {
+    order: 1;
+  }
+}
+
+.socialLinks {
+  @include media("<tablet") {
+    margin-bottom: 13px;
+    order: 2;
+  }
+}
+
+.copyright {
+  @include media("<tablet") {
+    margin-bottom: 5px;
+    order: 3;
+  }
+}
