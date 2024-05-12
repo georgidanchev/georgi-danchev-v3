@@ -1,31 +1,21 @@
 // import instagram from "../assets/instagram.svg"
-import Image from "next/image"
-import classes from "./SocialLinks.module.scss"
-import github from "../../assets/github.svg"
-import linkedin from "../../assets/linkedin.svg"
+import Image from "next/image";
+import classes from "./SocialLinks.module.scss";
+import github from "../../assets/github.svg";
+import linkedin from "../../assets/linkedin.svg";
 
 const socialLinks = () => {
-  const { REACT_APP_LINKEDIN, REACT_APP_GITHUB } = process.env
+  const { REACT_APP_LINKEDIN, REACT_APP_GITHUB } = process.env;
 
   return (
     <ul className={classes["social-links"]}>
       <li className={classes["social-links__list-item"]}>
-        <a
-          href={REACT_APP_LINKEDIN}
-          className={classes["social-links__link"]}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={REACT_APP_LINKEDIN} className={classes["social-links__link"]} target="_blank" rel="noreferrer">
           <Image priority src={linkedin} alt="Instagram icon" height="20" width="20" />
         </a>
       </li>
       <li className={`${classes["social-links__list-item"]}`}>
-        <a
-          href={REACT_APP_GITHUB}
-          className={classes["social-links__link"]}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={REACT_APP_GITHUB} className={classes["social-links__link"]} target="_blank" rel="noreferrer">
           <Image priority src={github} alt="Github icon" height="20" width="20" />
         </a>
       </li>
@@ -64,7 +54,7 @@ const socialLinks = () => {
         </a>
       </li> */}
     </ul>
-  )
-}
+  );
+};
 
-export default socialLinks
+export default socialLinks;

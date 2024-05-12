@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const StyledDecorativeBorder = styled.div`
   background-color: var(--color-primary);
@@ -22,10 +22,10 @@ const StyledDecorativeBorder = styled.div`
     transform: rotate(-180deg);
     bottom: 0;
   }
-`
+`;
 
 const DecorativeBorder = ({ location }) => {
-  return <StyledDecorativeBorder className={location}></StyledDecorativeBorder>
-}
+  return <StyledDecorativeBorder className={location}></StyledDecorativeBorder>;
+};
 
-export default DecorativeBorder
+export default DecorativeBorder;

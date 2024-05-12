@@ -1,8 +1,10 @@
-import classes from "./SectionHeader.module.scss"
+import classes from "./SectionHeader.module.scss";
 
 const SectionHeader = (props) => {
   return (
-    <div className={`${classes["section-header"]} ${props.link_title != null ? classes["section-header--w-t-btn"] : ""} `}>
+    <div
+      className={`${classes["section-header"]} ${props.link_title != null ? classes["section-header--w-t-btn"] : ""} `}
+    >
       <div className={classes["section-header__wrapper"]}>
         <p className={classes["section-header__subheading"]}>{props.subtitle}</p>
         <h2 className={classes["section-header__heading"]}>{props.title}</h2>
@@ -15,7 +17,7 @@ const SectionHeader = (props) => {
         ""
       )}
     </div>
-  )
-}
+  );
+};
 
-export default SectionHeader
+export default SectionHeader;

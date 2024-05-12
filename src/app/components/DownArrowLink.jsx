@@ -1,7 +1,7 @@
-import Image from "next/image"
-import arrowDownSvg from "../../assets/down-arrow.svg"
+import Image from "next/image";
+import arrowDownSvg from "../../assets/down-arrow.svg";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
 const StyledDownArrow = styled.a`
   position: absolute;
@@ -10,7 +10,7 @@ const StyledDownArrow = styled.a`
   z-index: 3;
   left: 50%;
 
-  @media only screen and (min-width: 590px)  {
+  @media only screen and (min-width: 590px) {
     bottom: 12vh;
   }
 
@@ -22,7 +22,7 @@ const StyledDownArrow = styled.a`
     width: 30px;
     height: 30px;
 
-    @media only screen and (min-width: 590px)  {
+    @media only screen and (min-width: 590px) {
       width: 50px;
       height: 50px;
     }
@@ -45,7 +45,7 @@ const StyledDownArrow = styled.a`
       transform: translateY(0);
     }
   }
-`
+`;
 
 const DownArrow = () => {
   return (
@@ -59,7 +59,7 @@ const DownArrow = () => {
         alt="Down arrow image"
       />
     </StyledDownArrow>
-  )
-}
+  );
+};
 
-export default DownArrow
+export default DownArrow;

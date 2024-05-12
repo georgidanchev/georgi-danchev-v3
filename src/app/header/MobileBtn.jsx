@@ -1,4 +1,4 @@
-import classes from './MobileBtn.module.scss'
+import classes from "./MobileBtn.module.scss";
 
 // import { useSelector, useDispatch } from "react-redux"
 // import { toggleMenu } from "../redux/menuReducer"
@@ -20,7 +20,7 @@ const MobileBtn = () => {
         <div className={`${classes["menu-btn__line"]} ${classes["menu-btn__line-3"]}`}></div>
       </div>
     </button>
-  )
-}
+  );
+};
 
-export default MobileBtn
+export default MobileBtn;

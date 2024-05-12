@@ -1,7 +1,7 @@
-import "lazysizes"
+import "lazysizes";
 
 const responsiveImage = (props) => {
-  const { alt, public_id, code, image_class, height, width } = props
+  const { alt, public_id, code, image_class, height, width } = props;
 
   return (
     <img
@@ -25,7 +25,7 @@ const responsiveImage = (props) => {
       width={width}
       alt={alt}
     />
-  )
-}
+  );
+};
 
-export default responsiveImage
+export default responsiveImage;

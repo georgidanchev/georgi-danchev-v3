@@ -1,9 +1,9 @@
-import MobileBtn from "./MobileBtn"
-import MobileNav from "./MobileNav"
-import SocialLinks from "./SocialLinks"
-import NameTitle from "../components/NameTitle.jsx"
-import classes from "./WebsiteHeader.module.scss"
-import sectClasses from "../styles/shared/Sections.module.scss"
+import MobileBtn from "./MobileBtn";
+import MobileNav from "./MobileNav";
+import SocialLinks from "./SocialLinks";
+import NameTitle from "../components/NameTitle.jsx";
+import classes from "./WebsiteHeader.module.scss";
+import sectClasses from "../styles/shared/Sections.module.scss";
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
       </div>
       <MobileNav />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

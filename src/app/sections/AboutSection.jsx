@@ -1,5 +1,5 @@
-import ResponsiveImage from "../components/ResponsiveImage"
-import SectionHeader from "../components/SectionHeader"
+import ResponsiveImage from "../components/ResponsiveImage";
+import SectionHeader from "../components/SectionHeader";
 import classes from "./AboutSection.modules.scss";
 
 const About = () => {
@@ -34,10 +34,10 @@ const About = () => {
             </div>
             <div className={classes["about__container"]}>
               <p className={classes["about__text"]}>
-                I think about frontend development as a way to connect people from across the globe
-                with immersive and intuitive experiences on the web. I have a passion for bringing
-                each site from concept to completion as a hands-on technical leader focused on
-                functionality and usability. This is what I do best and enjoy the most.
+                I think about frontend development as a way to connect people from across the globe with immersive and
+                intuitive experiences on the web. I have a passion for bringing each site from concept to completion as
+                a hands-on technical leader focused on functionality and usability. This is what I do best and enjoy the
+                most.
               </p>
               <a href="#contact" className={`${classes["about__link"]} btn`} data-scroll-to>
                 Contact Me
@@ -57,7 +57,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

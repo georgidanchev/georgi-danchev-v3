@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import DecorativeBorder from "../components/DecorativeBorder"
-import ResponsiveImage from "../components/ResponsiveImage"
-import DownArrowLink from "../components/DownArrowLink"
-import homeClasses from "./HomeSection.module.scss"
-import sectClasses from "../styles/shared/Sections.module.scss"
+import DecorativeBorder from "../components/DecorativeBorder";
+import ResponsiveImage from "../components/ResponsiveImage";
+import DownArrowLink from "../components/DownArrowLink";
+import homeClasses from "./HomeSection.module.scss";
+import sectClasses from "../styles/shared/Sections.module.scss";
 
 const Home = () => {
   return (
@@ -17,11 +17,15 @@ const Home = () => {
         data-scroll-call="home"
       >
         <h1 className={`${homeClasses["home-section__title"]}`}>
-          <span className={`${homeClasses["home-section__title-inner"]} ${homeClasses["home-section__title-inner--first"]}`}>
+          <span
+            className={`${homeClasses["home-section__title-inner"]} ${homeClasses["home-section__title-inner--first"]}`}
+          >
             Georgi Danchev
           </span>
           <span className={`${homeClasses["home-section__title-spacer"]}`}>|</span>
-          <span className={`${homeClasses["home-section__title-inner"]} ${homeClasses["home-section__title-inner--second"]}`}>
+          <span
+            className={`${homeClasses["home-section__title-inner"]} ${homeClasses["home-section__title-inner--second"]}`}
+          >
             Front End Developer
           </span>
         </h1>
@@ -46,7 +50,7 @@ const Home = () => {
 
       <DecorativeBorder location="bottom" />
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

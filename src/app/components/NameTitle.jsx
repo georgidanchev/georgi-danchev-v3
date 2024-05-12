@@ -1,7 +1,6 @@
-import classes from './NameTitle.module.scss'
+import classes from "./NameTitle.module.scss";
 
 const NameTitle = () => {
-
   return (
     <a className={classes["nameTitle"]} href="#home">
       <div className={classes["nameTitle__container"]}>
@@ -9,7 +8,7 @@ const NameTitle = () => {
         <span className={`${classes["nameTitle__inner--header"]} font-bold`}>Danchev</span>
       </div>
     </a>
-  )
-}
+  );
+};
 
-export default NameTitle
+export default NameTitle;
