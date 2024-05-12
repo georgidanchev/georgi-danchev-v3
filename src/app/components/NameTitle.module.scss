@@ -1,4 +1,4 @@
-@import "../styles/mixin/shared";
+@import "../styles/mixin/shared.scss";
 
 .nameTitle {
   display: flex;
@@ -20,7 +20,7 @@
   }
 }
 
-.header .nameTitle__inner {
+.nameTitle__inner--header {
   @include media("<tablet") {
     width: 25px;
     overflow: hidden;
@@ -32,7 +32,8 @@
   }
 }
 
-.footer .nameTitle {
+// rework and integrate with tailwind
+.nameTitle--footer {
   @include media("<tablet") {
     margin-bottom: 17px;
   }

@@ -1,15 +1,16 @@
-import NameTitle from "./NameTitle"
 import MobileBtn from "./MobileBtn"
 import MobileNav from "./MobileNav"
-import SocialLinks from './SocialLinks';
+import SocialLinks from "./SocialLinks"
+import NameTitle from "../components/NameTitle.jsx"
 import classes from "./WebsiteHeader.module.scss"
 import sectClasses from "../styles/shared/Sections.module.scss"
-
 
 const Header = () => {
   return (
     <header className={classes.header}>
-      <div className={`${classes["header__container"]} ${sectClasses["section-width"]} animate__animated animate__fadeIn animate__delay-1s`}>
+      <div
+        className={`${classes["header__container"]} ${sectClasses["section-width"]} animate__animated animate__fadeIn animate__delay-1s`}
+      >
         <NameTitle />
         <div className={classes["header__inner"]}>
           <SocialLinks />
