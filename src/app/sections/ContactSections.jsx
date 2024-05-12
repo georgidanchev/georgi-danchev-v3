@@ -168,7 +168,7 @@ const ContactSection = ({ children }) => {
             data-scroll-repeat="false"
             data-scroll-class="animate__fadeIn"
           >
-            <Image className={ContactClasses["contact__image"]} src={contactSVG} height="450" width="540" alt="" />
+            <Image className={ContactClasses["contact__image"]} src={contactSVG} height="450" width="auto" alt="" />
             <form
               className={`${ContactClasses["contact__form"]} ${ContactClasses["contact-form"]}`}
               action="https://postmail.invotes.com/send"
@@ -229,10 +229,9 @@ const ContactSection = ({ children }) => {
 
         <div className={`${SectionClasses["section__bg-image-wrapper"]}`}>
           <ResponsiveImage
-          className={`${SectionClasses["section__bg-image"]}`}
+            className={`${SectionClasses["section__bg-image"]}`}
             code="v1629540939"
             public_id="contact_vfklx0"
-            alt=""
             width="420"
             height="900"
           />
