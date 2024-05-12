@@ -40,9 +40,6 @@ const About = () => {
                 a hands-on technical leader focused on functionality and usability. This is what I do best and enjoy the
                 most.
               </p>
-              {/* <a href="#contact" className={`${AboutClasses["about__link"]}`} data-scroll-to>
-                Contact Me
-              </a> */}
               <StyledButton href="#contact" className={AboutClasses["about__link"]} data-scroll-to>Contact Me</StyledButton>
             </div>
             {/* <div className="about__bottom">
