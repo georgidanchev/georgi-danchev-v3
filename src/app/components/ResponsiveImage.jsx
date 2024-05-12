@@ -1,14 +1,13 @@
-import "lazysizes";
+'use client'
 
 const responsiveImage = (props) => {
-  const { alt, public_id, code, image_class, height, width } = props;
+  const { alt, public_id, code,image_class, height, width } = props;
 
   return (
     <img
-      className={`${image_class} lazyload`}
-      data-sizes="auto"
+      className={`${image_class}`}
       src={`https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_900,f_auto/${code}/${public_id}.webp`}
-      data-srcset={`
+      srcSet={`
         https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_360,f_auto/${code}/${public_id}.webp 360w,
         https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_590,f_auto/${code}/${public_id}.webp 590w,
         https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_900,f_auto/${code}/${public_id}.webp 900w,
@@ -23,7 +22,7 @@ const responsiveImage = (props) => {
       `}
       height={height}
       width={width}
-      alt={alt}
+      alt={alt != null ? alt : ""}
     />
   );
 };
