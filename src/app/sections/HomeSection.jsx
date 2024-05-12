@@ -35,7 +35,7 @@ const Home = () => {
 
       <div className={`${sectClasses["section__bg-image-wrapper"]} ${sectClasses["section__bg-image-wrapper--home"]}`}>
         <ResponsiveImage
-          image_class={sectClasses["section__bg-image"]}
+          className={sectClasses["section__bg-image"]}
           code="v1629540939"
           public_id="hero_rzr91t"
           alt="Laptop sitting on a desk"

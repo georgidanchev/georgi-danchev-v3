@@ -1,13 +1,23 @@
+"use client"
+
 import WebsiteHeader from "./header/WebsiteHeader";
 import HomeSection from "./sections/HomeSection";
-// import AboutSection from "./sections/AboutSection"
+import AboutSection from "./sections/AboutSection";
+
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import { useRef } from "react";
+
 
 export default function Home() {
+  const containerRef = useRef(null)
+
   return (
-    <main className="">
+  <LocomotiveScrollProvider options={{speed: 3500,scrollFromAnywhere: true,multiplier: 1,}} containerRef={containerRef}>
+    <main data-scroll-container ref={containerRef}>
       <WebsiteHeader />
       <HomeSection />
-      {/* <AboutSection /> */}
+      <AboutSection />
     </main>
+  </LocomotiveScrollProvider>
   );
 }

@@ -1,20 +1,16 @@
 import classes from "./SectionHeader.module.scss";
 
-const SectionHeader = (props) => {
+const SectionHeader = ({ link_url, link_title, subtitle, title }) => {
   return (
-    <div
-      className={`${classes["section-header"]} ${props.link_title != null ? classes["section-header--w-t-btn"] : ""} `}
-    >
+    <div className={`${classes["section-header"]} ${link_title != null ? classes["section-header--w-t-btn"] : ""} `}>
       <div className={classes["section-header__wrapper"]}>
-        <p className={classes["section-header__subheading"]}>{props.subtitle}</p>
-        <h2 className={classes["section-header__heading"]}>{props.title}</h2>
+        {subtitle && <p className={classes["section-header__subheading"]}>{subtitle}</p>}
+        <h2 className={classes["section-header__heading"]}>{title}</h2>
       </div>
-      {props.link_url != null ? (
-        <a href={props.link_url} className={`${classes["section-header__btn"]} btn`}>
-          {props.link_title}
+      {link_url && (
+        <a href={link_url} className={`${classes["section-header__btn"]} btn`}>
+          {link_title}
         </a>
-      ) : (
-        ""
       )}
     </div>
   );

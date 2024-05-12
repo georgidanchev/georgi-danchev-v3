@@ -1,0 +1,22 @@
+@import "../styles/mixin/shared.scss";
+
+.btn {
+  @include fluid-type(500px, 1600px, 14px, 16px);
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  border: transparent;
+  color: var(--color-black);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  padding: 17px 25px 15px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-secondary);
+    outline: none;
+  }
+}

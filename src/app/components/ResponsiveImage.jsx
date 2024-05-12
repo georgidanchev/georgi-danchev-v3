@@ -1,11 +1,11 @@
 'use client'
 
 const responsiveImage = (props) => {
-  const { alt, public_id, code,image_class, height, width } = props;
+  const { alt, public_id, code, className, height, width } = props;
 
   return (
     <img
-      className={`${image_class}`}
+      className={`${className}`}
       src={`https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_900,f_auto/${code}/${public_id}.webp`}
       srcSet={`
         https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_360,f_auto/${code}/${public_id}.webp 360w,
