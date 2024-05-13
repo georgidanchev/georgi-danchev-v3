@@ -16,14 +16,14 @@
   },
   "devDependencies": {
     "animate.css": "^4.1.1",
-    "eslint": "^8",
+    "eslint": "^9",
     "eslint-config-next": "14.2.3",
     "include-media": "^2.0.0",
     "postcss": "^8",
     "postcss-reporter": "^7.1.0",
-    "sass": "^1.77.0",
-    "styled-components": "^6.1.10",
-    "tailwindcss": "^3.4.1"
+    "sass": "^1.77.1",
+    "styled-components": "^6.1.11",
+    "tailwindcss": "^3.4.3"
   },
   "resolutions": {
     "styled-components": "^5"
