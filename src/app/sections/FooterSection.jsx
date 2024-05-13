@@ -1,8 +1,8 @@
 import Copyright from "../components/Copyright.jsx";
-import NameTitle from "../components/NameTitle.jsx";
-import SocialLinks from "../header/SocialLinks.jsx";
 import footerClasses from "./FooterSection.module.scss";
+import NameTitle from "../components/NameTitle.jsx";
 import sectionClasses from "../styles/shared/Sections.module.scss";
+import SocialLinks from "../header/SocialLinks.jsx";
 
 const Footer = () => {
   return (

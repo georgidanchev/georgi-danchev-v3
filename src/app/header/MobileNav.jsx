@@ -3,7 +3,6 @@
 import { closeMenu } from "../redux/menuReducer";
 import { setCurrentSection } from "../redux/navReducer";
 import { useSelector, useDispatch } from "react-redux";
-
 import MobileNavClasses from "./MobileNav.module.scss";
 import sectClasses from "../styles/shared/Sections.module.scss";
 

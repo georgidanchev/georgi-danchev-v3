@@ -1,7 +1,7 @@
 'use client'
 
-import { useSelector, useDispatch } from "react-redux";
 import { setCurrentSection } from "../redux/navReducer";
+import { useSelector, useDispatch } from "react-redux";
 import classes from "./DotNavs.module.scss";
 
 const DotNavs = () => {
