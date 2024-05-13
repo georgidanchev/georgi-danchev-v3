@@ -1,12 +1,13 @@
 "use client";
 
-import WebsiteHeader from "./header/WebsiteHeader";
-import HomeSection from "./sections/HomeSection";
-import AboutSection from "./sections/AboutSection";
-import ContactSection from "./sections/ContactSections.jsx";
-import FooterSection from "./sections/FooterSection.jsx";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
+import AboutSection from "./sections/AboutSection";
+import ContactSection from "./sections/ContactSections.jsx";
+import DotNavs from "./components/DotNavs"
+import FooterSection from "./sections/FooterSection.jsx";
+import HomeSection from "./sections/HomeSection";
+import WebsiteHeader from "./header/WebsiteHeader";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -19,6 +20,7 @@ export default function Home() {
     >
       <main data-scroll-container ref={containerRef}>
         <WebsiteHeader />
+        <DotNavs />
         <HomeSection />
         <AboutSection />
         <ContactSection />
