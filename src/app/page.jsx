@@ -22,7 +22,7 @@ function Home() {
       watch={[]}
     >
       <Provider store={store}>
-        <main data-scroll-container ref={containerRef} className="website-wrapper">
+        <main data-scroll-container ref={containerRef}>
           <WebsiteHeader />
           <DotNavs />
           <HomeSection />

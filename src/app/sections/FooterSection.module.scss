@@ -8,6 +8,7 @@
   width: 100vw;
   left: 50%;
   background-color: var(--color-primary);
+  scroll-snap-align: start;
 }
 
 .footer__inner {
