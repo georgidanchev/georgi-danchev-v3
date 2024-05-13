@@ -1,26 +1,27 @@
 import ResponsiveImage from "../components/ResponsiveImage";
 import SectionHeader from "../components/SectionHeader";
 import AboutClasses from "./AboutSection.module.scss";
-import SectionClasses from "../styles/shared/Sections.module.scss"
-import StyledButton from '../components/StyledButton';
+import SectionClasses from "../styles/shared/Sections.module.scss";
+import StyledButton from "../components/StyledButton";
 import { useDispatch } from "react-redux";
 import { setSectionInView } from "../redux/navReducer";
 import { InView } from "react-intersection-observer";
 
 const About = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const isInView = (inView) => {
     if (inView) {
-      dispatch(setSectionInView("about"))
+      dispatch(setSectionInView("about"));
     }
   };
 
   return (
-    <InView as="section"
-    threshold={0.25}
+    <InView
       id="about"
+      as="section"
       onChange={isInView}
+      threshold={0.25}
       className={`${SectionClasses["section"]} ${SectionClasses["section--about"]}`}
       data-scroll
       data-scroll-section
@@ -53,7 +54,9 @@ const About = () => {
                 a hands-on technical leader focused on functionality and usability. This is what I do best and enjoy the
                 most.
               </p>
-              <StyledButton href="#contact" className={AboutClasses["about__link"]} data-scroll-to>Contact Me</StyledButton>
+              <StyledButton href="#contact" className={AboutClasses["about__link"]} data-scroll-to>
+                Contact Me
+              </StyledButton>
             </div>
             {/* <div className="about__bottom">
           <div className="about__skill-charts">

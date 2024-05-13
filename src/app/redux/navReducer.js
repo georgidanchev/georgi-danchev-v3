@@ -5,7 +5,7 @@ export const navSlice = createSlice({
   initialState: {
     sectionInView: "",
     // allSections: ["home", "about", "projects", "blog", "contact"],
-    allSections: ["home", "about", "contact"],
+    allSections: ["home", "about", "blog", "contact"],
   },
   reducers: {
     setSectionInView: (state, action) => {

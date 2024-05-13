@@ -10,6 +10,7 @@ import FooterSection from "./sections/FooterSection.jsx";
 import HomeSection from "./sections/HomeSection";
 import store from "./redux/store";
 import WebsiteHeader from "./header/WebsiteHeader";
+import BlogSection from "./sections/BlogSection.jsx"
 
 function Home() {
   const containerRef = useRef(null);
@@ -27,6 +28,7 @@ function Home() {
           <DotNavs />
           <HomeSection />
           <AboutSection />
+          <BlogSection />
           <ContactSection />
           <FooterSection />
         </main>
