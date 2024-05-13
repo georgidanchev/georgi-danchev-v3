@@ -8,12 +8,21 @@ import SectionClasses from "../styles/shared/Sections.module.scss";
 import ContactClasses from "./ContactSections.module.scss";
 import Image from "next/image";
 import StyledButton from "../components/StyledButton";
-
-// import useIntersection from "../helpers/useIntersection"
+import { useDispatch } from "react-redux";
+import { setSectionInView } from "../redux/navReducer";
+import { InView } from "react-intersection-observer";
 
 const ContactSection = ({ children }) => {
   // const ref_contact = useRef()
   // useIntersection(ref_contact, "contact")
+
+  const dispatch = useDispatch()
+
+  const isInView = (inView) => {
+    if (inView) {
+      dispatch(setSectionInView("contact"))
+    }
+  };
 
   const submitBtn = React.createRef();
   let [formSubmitted, isFormSubmitted] = useState(false);
@@ -148,7 +157,7 @@ const ContactSection = ({ children }) => {
   };
 
   return (
-    <div className={SectionClasses["section"]}>
+    <InView threshold={0.25} as="div" className={SectionClasses["section"]} onChange={isInView}>
       <section
         id="contact"
         data-scroll-section
@@ -238,7 +247,7 @@ const ContactSection = ({ children }) => {
         </div>
       </section>
       {children}
-    </div>
+    </InView>
   );
 };
 

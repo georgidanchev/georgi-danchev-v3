@@ -14,7 +14,7 @@ const DotNavs = () => {
       <a
         href={`#${nav}`}
         onClick={() => dispatch(setCurrentSection(nav))}
-        className={`${classes["dot-navs__link"]} ${nav === sectionInView ? "active" : ""}`}
+        className={`${classes["dot-navs__link"]} ${nav === sectionInView ? classes["active"] : ""}`}
         data-scroll-to
       >
         <span className={`${classes["dot-navs__text"]}`}>{nav}</span>

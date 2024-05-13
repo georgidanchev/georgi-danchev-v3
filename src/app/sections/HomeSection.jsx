@@ -3,12 +3,23 @@
 import DecorativeBorder from "../components/DecorativeBorder";
 import ResponsiveImage from "../components/ResponsiveImage";
 import DownArrowLink from "../components/DownArrowLink";
+import { setSectionInView } from "../redux/navReducer"
 import homeClasses from "./HomeSection.module.scss";
 import sectClasses from "../styles/shared/Sections.module.scss";
+import { InView } from "react-intersection-observer";
+import { useDispatch } from "react-redux";
 
 const Home = () => {
+  const dispatch = useDispatch()
+
+  const isInView = (inView) => {
+    if (inView) {
+      dispatch(setSectionInView("home"))
+    }
+  };
+
   return (
-    <section id="home" className={sectClasses["section"]} data-scroll-section>
+    <InView threshold={0.25} as="section" id="home" className={sectClasses["section"]} onChange={isInView} data-scroll-section>
       <div
         className={`${homeClasses["home-section"]} ${sectClasses["section-width"]} ${sectClasses["section-width--padding"]} animate__animated animate__zoomInDown`}
         data-scroll
@@ -49,7 +60,7 @@ const Home = () => {
       <DownArrowLink />
 
       <DecorativeBorder location="bottom" />
-    </section>
+    </InView>
   );
 };
 
