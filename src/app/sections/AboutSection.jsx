@@ -1,5 +1,5 @@
 import ResponsiveImage from "../components/ResponsiveImage";
-import SectionHeader from "../components/SectionHeader";
+import SectionTitle from "../components/SectionTitle";
 import AboutClasses from "./AboutSection.module.scss";
 import SectionClasses from "../styles/shared/Sections.module.scss";
 import StyledButton from "../components/StyledButton";
@@ -36,7 +36,7 @@ const About = () => {
           data-scroll-repeat="false"
           data-scroll-class="animate__fadeIn"
         >
-          <SectionHeader title="Hello! My name is Georgi" />
+          <SectionTitle title="Hello! My name is Georgi" />
           <div className={AboutClasses["about__top"]}>
             <div className={AboutClasses["about__image-wrapper"]}>
               <ResponsiveImage

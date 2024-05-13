@@ -1,6 +1,6 @@
-import classes from "./SectionHeader.module.scss";
+import classes from "./SectionTitle.module.scss";
 
-const SectionHeader = ({ className, link_url, link_title, subtitle, title }) => {
+const SectionTitle = ({ className, link_url, link_title, subtitle, title }) => {
   return (
     <div className={`${className && classes[className]} ${classes["section-header"]} ${link_title != null ? classes["section-header--w-t-btn"] : ""} `}>
       <div className={classes["section-header__wrapper"]}>
@@ -16,4 +16,4 @@ const SectionHeader = ({ className, link_url, link_title, subtitle, title }) => 
   );
 };
 
-export default SectionHeader;
+export default SectionTitle;

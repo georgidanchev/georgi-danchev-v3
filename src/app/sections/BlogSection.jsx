@@ -1,6 +1,6 @@
 import BlogPost from "../components/BlogPost";
 import data_blog from "../../assets/data-blog.json";
-import SectionHeader from "../components/SectionHeader";
+import SectionTitle from "../components/SectionTitle";
 import sectionClasses from "../styles/shared/Sections.module.scss";
 import blogClasses from "./BlogSection.module.scss";
 import { useDispatch } from 'react-redux';
@@ -34,7 +34,7 @@ const Blog = () => {
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${blogClasses["blog"]}`}
       >
-        <SectionHeader subtitle="latest posts" title="My Blog Posts" link_title="see more posts" className="section-header--align-left-tablet-on" />
+        <SectionTitle subtitle="latest posts" title="My Blog Posts" link_title="see more posts" className="section-header--align-left-tablet-on" />
         <div className={`${blogClasses["blog__content"]}`}>{blogPosts}</div>
       </div>
     </InView>

@@ -7,7 +7,7 @@ import ProjectCard from "../components/ProjectCard.jsx";
 import projectClasses from "./ProjectsSection.module.scss";
 import ResponsiveImage from "../components/ResponsiveImage.jsx";
 import sectionClasses from "../styles/shared/Sections.module.scss";
-import SectionHeader from "../components/SectionHeader.jsx";
+import SectionTitle from "../components/SectionTitle.jsx";
 
 const ProjectsSection = () => {
   let projectsList = [];
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${sectionClasses["section-width--bordered-top"]} ${sectionClasses["section-width--bordered-bottom"]} ${projectClasses["projects"]}`}
       >
-        <SectionHeader title="My recent projects" subtitle="My portfolio" className="section-header--align-left-tablet-on" />
+        <SectionTitle title="My recent projects" subtitle="My portfolio" className="section-header--align-left-tablet-on" />
 
         <div className={`${projectClasses["projects__cards-wrapper"]}`}>{projectsList}</div>
 
