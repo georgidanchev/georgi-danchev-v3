@@ -11,7 +11,7 @@ const Header = () => {
       <div
         className={`${classes["header__container"]} ${sectClasses["section-width"]} animate__animated animate__fadeIn animate__delay-1s`}
       >
-        <NameTitle />
+        <NameTitle className="nameTitle--header" />
         <div className={classes["header__inner"]}>
           <SocialLinks />
           <MobileBtn />

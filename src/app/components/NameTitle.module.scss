@@ -20,21 +20,29 @@
   }
 }
 
-.nameTitle__inner--header {
-  @include media("<tablet") {
-    width: 25px;
-    overflow: hidden;
-    display: inline-block;
-
-    &--first {
-      margin-right: 3px;
+.nameTitle--header {
+  .nameTitle__inner {
+    @include media("<tablet") {
+      width: 25px;
+      overflow: hidden;
+      display: inline-block;
     }
+  }
+
+  .nameTitle__inner--first {
+    margin-right: 7px;
+  }
+
+  .nameTitle__inner--second {
+    font-weight: bold;
   }
 }
 
 // rework and integrate with tailwind
 .nameTitle--footer {
-  @include media("<tablet") {
-    margin-bottom: 17px;
+  margin-bottom: 17px;
+
+  @include media(">tablet") {
+    margin-bottom: 0px;
   }
 }
