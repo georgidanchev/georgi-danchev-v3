@@ -1,0 +1,62 @@
+@import "../styles/mixin/shared.scss";
+
+.dot-navs {
+  position: fixed;
+  transform: translateY(-50%);
+  z-index: 5;
+  left: 30px;
+  top: 50%;
+
+  @include media("<desktop-large") {
+    left: 15px;
+  }
+
+  @include media("<desktop") {
+    display: none;
+  }
+
+  &__list-item {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  &__link {
+    transition: background-color 300ms linear, border 300ms linear, height 150ms linear;
+    border: 2px solid var(--color-gray-2);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 50%;
+    display: block;
+  }
+}
+
+.dot-navs {
+  &__text {
+    transition: opacity 300ms ease, color 300ms ease;
+    color: var(--color-gray-2);
+    font-size: 12px;
+    font-weight: bold;
+    left: calc(100% + 12px);
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 2px solid var(--color-secondary);
+  }
+
+  &__link:hover &__text {
+    color: var(--color-secondary);
+  }
+
+  &__link.active {
+    border: 2px solid var(--color-secondary);
+    background-color: var(--color-secondary);
+    border-radius: 13.5px;
+  }
+}

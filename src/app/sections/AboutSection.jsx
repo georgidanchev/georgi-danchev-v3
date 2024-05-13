@@ -3,11 +3,24 @@ import SectionHeader from "../components/SectionHeader";
 import AboutClasses from "./AboutSection.module.scss";
 import SectionClasses from "../styles/shared/Sections.module.scss"
 import StyledButton from '../components/StyledButton';
+import { useDispatch } from "react-redux";
+import { setSectionInView } from "../redux/navReducer";
+import { InView } from "react-intersection-observer";
 
 const About = () => {
+  const dispatch = useDispatch()
+
+  const isInView = (inView) => {
+    if (inView) {
+      dispatch(setSectionInView("about"))
+    }
+  };
+
   return (
-    <section
+    <InView as="section"
+    threshold={0.25}
       id="about"
+      onChange={isInView}
       className={`${SectionClasses["section"]} ${SectionClasses["section--about"]}`}
       data-scroll
       data-scroll-section
@@ -55,7 +68,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </InView>
   );
 };
 
