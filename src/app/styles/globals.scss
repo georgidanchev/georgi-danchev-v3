@@ -120,12 +120,14 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
 }
 
-.website-wrapper {
+html {
   scroll-behavior: smooth;
-  // scroll-snap-type: y mandatory;
-  // overscroll-behavior-y: none;
-  // overflow-y: scroll;
-  // height: 100dvh;
+  @include media(">tablet") {
+    scroll-snap-type: y proximity;
+    overscroll-behavior-y: contain;
+    overflow-y: scroll;
+    height: 100dvh;
+  }
 }
 
 .visually-hidden {
