@@ -1,26 +1,28 @@
 "use client";
 
-// import { closeMenu } from "../redux/menuReducer"
-// import { setCurrentSection } from "../redux/navReducer"
-// import { useSelector, useDispatch } from "react-redux"
+import { closeMenu } from "../redux/menuReducer";
+import { setCurrentSection } from "../redux/navReducer";
+import { useSelector, useDispatch } from "react-redux";
 
-import classes from "./MobileNav.module.scss";
+import MobileNavClasses from "./MobileNav.module.scss";
+import sectClasses from "../styles/shared/Sections.module.scss";
 
-const allSections = ["home", "about", "projects", "blog", "contact"];
+// const allSections = ["home", "about", "projects", "blog", "contact"];
+const allSections = ["home", "about", "contact"];
 
 const MobileNav = () => {
-  // const { allSections } = useSelector((state) => state.nav)
-  // const { sectionInView } = useSelector((state) => state.nav)
-  // const { isMenuOpen } = useSelector((state) => state.menu)
-  // const dispatch = useDispatch()
+  const { allSections } = useSelector((state) => state.nav);
+  const { sectionInView } = useSelector((state) => state.nav);
+  const { isMenuOpen } = useSelector((state) => state.menu);
+  const dispatch = useDispatch();
 
   const links_refs = [];
   const setRef = (ref) => links_refs.push(ref);
 
   const handleClick = (e, nav) => {
     e.preventDefault();
-    // dispatch(closeMenu())
-    // dispatch(setCurrentSection(nav))
+    dispatch(closeMenu());
+    dispatch(setCurrentSection(nav));
 
     setTimeout(() => {
       links_refs[e.target.dataset.target].click();
@@ -28,10 +30,10 @@ const MobileNav = () => {
   };
 
   const allNavs = allSections.map((nav, index) => (
-    <li className={classes["mobileNav__list-item"]} key={nav}>
+    <li className={MobileNavClasses["mobileNav__list-item"]} key={nav}>
       <button
         data-target={`${index}`}
-        // className={`mobileNav__link ${nav === sectionInView ? "active" : ""}`}
+        className={`${MobileNavClasses["mobileNav__link"]} ${nav === sectionInView && MobileNavClasses["active"]}`}
         onClick={(e) => handleClick(e, nav)}
         type="button"
       >
@@ -44,8 +46,8 @@ const MobileNav = () => {
   ));
 
   return (
-    <div className={`${classes.mobileNav} section-width`}>
-      <ul className={classes["mobileNav__list"]}>{allNavs}</ul>
+    <div className={`${sectClasses["section-width"]} ${MobileNavClasses.mobileNav} ${isMenuOpen && MobileNavClasses["active"]}`}>
+      <ul className={MobileNavClasses["mobileNav__list"]}>{allNavs}</ul>
     </div>
   );
 };

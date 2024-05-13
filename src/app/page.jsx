@@ -8,6 +8,8 @@ import DotNavs from "./components/DotNavs"
 import FooterSection from "./sections/FooterSection.jsx";
 import HomeSection from "./sections/HomeSection";
 import WebsiteHeader from "./header/WebsiteHeader";
+import { Provider } from "react-redux"
+import store from "./redux/store"
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -18,14 +20,16 @@ export default function Home() {
       containerRef={containerRef}
       watch={[]}
     >
-      <main data-scroll-container ref={containerRef}>
-        <WebsiteHeader />
-        <DotNavs />
-        <HomeSection />
-        <AboutSection />
-        <ContactSection />
-        <FooterSection />
-      </main>
+      <Provider store={store}>
+        <main data-scroll-container ref={containerRef}>
+          <WebsiteHeader />
+          <DotNavs />
+          <HomeSection />
+          <AboutSection />
+          <ContactSection />
+          <FooterSection />
+        </main>
+      </Provider>
     </LocomotiveScrollProvider>
   );
 }
