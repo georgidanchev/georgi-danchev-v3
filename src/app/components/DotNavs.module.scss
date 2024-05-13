@@ -42,6 +42,7 @@
     position: absolute;
     text-transform: uppercase;
     top: 50%;
+    opacity: 0;
     transform: translateY(-50%);
   }
 
@@ -52,10 +53,11 @@
 
   &__link:hover &__text {
     color: var(--color-secondary);
+    opacity: 1;
   }
 
   &__link.active {
-    border: 2px solid var(--color-secondary);
+    // border: 2px solid var(--color-secondary);
     background-color: var(--color-secondary);
     border-radius: 13.5px;
   }

@@ -26,12 +26,12 @@ const ProjectsSection = () => {
 
   return (
     <InView
+      threshold={0.5}
       id="projects"
       as="section"
       className={`${sectionClasses["section"]} ${sectionClasses["section--projects"]}`}
       data-scroll-section
       onChange={isInView}
-      threshold={0.25}
     >
       <DecorativeBorder location="top" />
 

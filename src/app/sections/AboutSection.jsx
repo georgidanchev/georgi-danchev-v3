@@ -21,7 +21,7 @@ const About = () => {
       id="about"
       as="section"
       onChange={isInView}
-      threshold={0.25}
+      threshold={0.5}
       className={`${SectionClasses["section"]} ${SectionClasses["section--about"]}`}
       data-scroll
       data-scroll-section

@@ -29,7 +29,7 @@ const Blog = () => {
       className={sectionClasses["section"]}
       data-scroll-section
       onChange={isInView}
-      threshold={0.25}
+      threshold={0.5}
     >
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${blogClasses["blog"]}`}
