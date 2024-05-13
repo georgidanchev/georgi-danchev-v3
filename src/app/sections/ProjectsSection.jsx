@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${sectionClasses["section-width--bordered-top"]} ${sectionClasses["section-width--bordered-bottom"]} ${projectClasses["projects"]}`}
       >
-        <SectionHeader title="My recent projects" subtitle="My portfolio" />
+        <SectionHeader title="My recent projects" subtitle="My portfolio" className="section-header--align-left-tablet-on" />
 
         <div className={`${projectClasses["projects__cards-wrapper"]}`}>{projectsList}</div>
 
