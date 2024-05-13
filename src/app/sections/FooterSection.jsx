@@ -3,7 +3,6 @@ import NameTitle from "../components/NameTitle.jsx";
 import SocialLinks from "../header/SocialLinks.jsx";
 import footerClasses from "./FooterSection.module.scss";
 import sectionClasses from "../styles/shared/Sections.module.scss";
-import NameTitleClasses from "../components/NameTitle.module.scss";
 
 const Footer = () => {
   return (
@@ -15,11 +14,11 @@ const Footer = () => {
       data-scroll-class="animate__fadeIn"
     >
       <div className={`${footerClasses["footer__inner"]} ${sectionClasses["section-width"]}`}>
-        <SocialLinks className={footerClasses["socialLinks"]} />
+        <Copyright className={footerClasses["copyright"]} />
 
         <NameTitle className="nameTitle--footer" />
 
-        <Copyright className={footerClasses["copyright"]} />
+        <SocialLinks className={footerClasses["socialLinks"]} />
       </div>
     </div>
   );
