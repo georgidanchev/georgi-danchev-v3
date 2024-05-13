@@ -62,7 +62,7 @@ const ContactSection = ({ children }) => {
   };
 
   const buildFormData = (e) => {
-    let formBody = `access_token=${process.env.REACT_APP_MAIL_TOKEN}`;
+    let formBody = `access_token=w3h6ts7se4otodw6ggzah8pi`;
     for (const element of e.target) {
       if (element.hasAttribute("data-name")) {
         formBody += `&${element.dataset.name}=${escapeString(element.value)}`;
