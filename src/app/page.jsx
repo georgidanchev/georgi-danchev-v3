@@ -11,6 +11,7 @@ import HomeSection from "./sections/HomeSection";
 import store from "./redux/store";
 import WebsiteHeader from "./header/WebsiteHeader";
 import BlogSection from "./sections/BlogSection.jsx"
+import ProjectsSection from "./sections/ProjectsSection";
 
 function Home() {
   const containerRef = useRef(null);
@@ -28,6 +29,7 @@ function Home() {
           <DotNavs />
           <HomeSection />
           <AboutSection />
+          <ProjectsSection />
           <BlogSection />
           <ContactSection />
           <FooterSection />

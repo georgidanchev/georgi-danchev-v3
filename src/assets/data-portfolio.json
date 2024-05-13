@@ -1,0 +1,38 @@
+[
+  {
+    "id": "33e2d2af252e461da3cf5087330723c5",
+    "title": "Project 1",
+    "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
+    "tech_stack": "SCSS, REACT, SOMETHING ELSE",
+    "github_url": "",
+    "img_name": "about_cphruk",
+    "img_alt": "alt 1"
+  },
+  {
+    "id": "d0e17a6371ec4e52aebffd32d7008190",
+    "title": "Project 2",
+    "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
+    "tech_stack": "SCSS, REACT, SOMETHING ELSE",
+    "github_url": "",
+    "img_name": "about_cphruk",
+    "img_alt": "alt 1"
+  },
+  {
+    "id": "97e4b06295974f81abce1e060b6b4223",
+    "title": "Project 3",
+    "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
+    "tech_stack": "SCSS, REACT, SOMETHING ELSE",
+    "github_url": "",
+    "img_name": "about_cphruk",
+    "img_alt": "alt 1"
+  },
+  {
+    "id": "6f8c8c0f60524d29adc3b653c5e09cb6",
+    "title": "Project 4",
+    "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
+    "tech_stack": "SCSS, REACT, SOMETHING ELSE",
+    "github_url": "",
+    "img_name": "about_cphruk",
+    "img_alt": "alt 1"
+  }
+]
