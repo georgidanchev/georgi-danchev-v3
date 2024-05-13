@@ -18,6 +18,13 @@
     }
   }
 
+  &--align-left-tablet-on p,
+  &--align-left-tablet-on h2 {
+    @include media(">tablet") {
+      text-align: start;
+    }
+  }
+
   &__subheading {
     @include fluid-type(350px, 768px, 16px, 26px);
     font-weight: bold;

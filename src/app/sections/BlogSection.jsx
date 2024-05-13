@@ -26,7 +26,7 @@ const Blog = () => {
     <InView
       id="blog"
       as="section"
-      className={`${sectionClasses["section"]} ${sectionClasses["section--blogs"]}`}
+      className={sectionClasses["section"]}
       data-scroll-section
       onChange={isInView}
       threshold={0.25}
@@ -34,7 +34,7 @@ const Blog = () => {
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${blogClasses["blog"]}`}
       >
-        <SectionHeader subtitle="latest posts" title="My Blog Posts" link_title="see more posts" />
+        <SectionHeader subtitle="latest posts" title="My Blog Posts" link_title="see more posts" className="section-header--align-left-tablet-on" />
         <div className={`${blogClasses["blog__content"]}`}>{blogPosts}</div>
       </div>
     </InView>
