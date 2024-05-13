@@ -121,11 +121,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .website-wrapper {
-  scroll-snap-type: y mandatory;
-  overscroll-behavior-y: none;
   scroll-behavior: smooth;
-  overflow-y: scroll;
-  height: 100dvh;
+  // scroll-snap-type: y mandatory;
+  // overscroll-behavior-y: none;
+  // overflow-y: scroll;
+  // height: 100dvh;
 }
 
 .visually-hidden {
