@@ -30,7 +30,7 @@ export default function useFetch(fetchFn, initialValue) {
 }
 
 export async function getAllProjects() {
-  const response = await fetch("/api/projects")
+  const response = await fetch("/api/myProjects")
   const resData = await response.json()
 
   if (!response.ok) {
@@ -41,7 +41,7 @@ export async function getAllProjects() {
 }
 
 export async function getSingleProject(id) {
-  const response = await fetch(`/api/projects/${id}`)
+  const response = await fetch(`/api/myProjects/${id}`)
   const resData = await response.json()
 
   if (!response.ok) {
