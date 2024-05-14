@@ -51,3 +51,26 @@ export async function getSingleProject(id) {
   return resData
 }
 
+export async function getAllBlogPosts() {
+  const response = await fetch("/api/blogPosts")
+  const resData = await response.json()
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch places")
+  }
+
+  return resData
+}
+
+export async function getSingleBlogPost(id) {
+  const response = await fetch(`/api/blogPosts/${id}`)
+  const resData = await response.json()
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch user places")
+  }
+
+  return resData
+}
+
+

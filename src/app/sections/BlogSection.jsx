@@ -1,13 +1,14 @@
 import BlogPost from "../components/BlogPost";
-import data_blog from "../../assets/data-blog.json";
 import SectionTitle from "../components/SectionTitle";
 import sectionClasses from "../styles/shared/Sections.module.scss";
 import blogClasses from "./BlogSection.module.scss";
 import { useDispatch } from 'react-redux';
 import { InView } from 'react-intersection-observer';
 import { setSectionInView } from "../redux/navReducer";
+import useFetch, { getAllBlogPosts } from "../hooks/useFetch";
 
 const Blog = () => {
+  const { isFetching, error, fetchedData } = useFetch(getAllBlogPosts, []);
   let blogPosts = [];
 
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Blog = () => {
     }
   };
 
-  data_blog.forEach((blog_post) => {
+  fetchedData.forEach((blog_post) => {
     blogPosts.push(<BlogPost key={blog_post.id} blog_post={blog_post} />);
   });
 

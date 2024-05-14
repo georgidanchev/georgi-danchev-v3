@@ -1,14 +1,13 @@
 import { InView } from "react-intersection-observer";
 import { setSectionInView } from "../redux/navReducer";
 import { useDispatch } from "react-redux";
-import data_portfolio from "../../assets/data-portfolio.json";
 import DecorativeBorder from "../components/DecorativeBorder.jsx";
 import ProjectCard from "../components/ProjectCard.jsx";
 import projectClasses from "./ProjectsSection.module.scss";
 import ResponsiveImage from "../components/ResponsiveImage.jsx";
 import sectionClasses from "../styles/shared/Sections.module.scss";
 import SectionTitle from "../components/SectionTitle.jsx";
-import useFetch, { getAllProjects } from "../helpers/useFetch";
+import useFetch, { getAllProjects } from "../hooks/useFetch";
 
 const ProjectsSection = () => {
 let projectsList = [];
