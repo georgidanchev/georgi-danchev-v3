@@ -25,7 +25,7 @@ const BlogPost = (props) => {
   };
 
   return (
-    <Link as={`/?posts=${blog_post.id}`} href={`posts/${blog_post.id}`} className={postClasses["blog-post"]}>
+    <Link scroll={false} href={`/?post-id=${blog_post.id}`} className={postClasses["blog-post"]}>
       <div className={postClasses["blog-post__image-wrap"]}>
         <ResponsiveImage
           className={postClasses["blog-post__image"]}

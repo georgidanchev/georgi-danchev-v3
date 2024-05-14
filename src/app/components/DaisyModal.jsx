@@ -2,22 +2,13 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const DaisyModalWrapper = ({projectId}) => {
+const DaisyModalWrapper = ({ projectId, postId }) => {
   const router = useRouter();
-  const [isOpen, setOpen] = useState(false);
-
-  useEffect(() => {
-    if (projectId) {
-      setOpen(true);
-    } else {
-      setOpen(false);
-    }
-  }, [projectId]);
 
   return (
     <dialog
       className="modal"
-      open={isOpen}
+      open={true}
       onClose={() => {
         router.push("/", { scroll: false });
       }}
@@ -43,7 +34,13 @@ const DaisyModalWrapper = ({projectId}) => {
 
 export default function DaisyModal() {
   const searchParams = useSearchParams();
-  const projectId = searchParams.get("project");
+  const projectId = searchParams.get("project-id");
+  const postId = searchParams.get("post-id");
 
-  return <>{projectId && <DaisyModalWrapper projectId={projectId} />}</>;
+  return (
+    <>
+      {projectId && <DaisyModalWrapper projectId={projectId} />}
+      {postId && <DaisyModalWrapper projectId={projectId} />}
+    </>
+  );
 }

@@ -19,7 +19,6 @@ function Home() {
   const containerRef = useRef(null);
   const locomotiveOptions = { speed: 3500, scrollFromAnywhere: true, multiplier: 1 };
 
-
   return (
     <LocomotiveScrollProvider options={locomotiveOptions} containerRef={containerRef} watch={[]}>
       <main data-scroll-container ref={containerRef}>

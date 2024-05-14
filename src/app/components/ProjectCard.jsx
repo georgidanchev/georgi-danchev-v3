@@ -7,7 +7,7 @@ const ProjectCard = (props) => {
   const project = props.project;
 
   return (
-    <Link  data-scroll scroll={false} href={`/?project=${project.id}`} className={projectClasses["project-card"]}>
+    <Link scroll={false} href={`/?project-id=${project.id}`} className={projectClasses["project-card"]}>
       <div className={projectClasses["project-card__image-wrap"]}>
         <ResponsiveImage
           className={projectClasses["project-card__image"]}
