@@ -1,5 +1,5 @@
-const Project = () => {
-  return <h1>project</h1>;
+const Project = ({params}) => {
+  return <h1>project {params.id}</h1>;
 }
 
 export default Project

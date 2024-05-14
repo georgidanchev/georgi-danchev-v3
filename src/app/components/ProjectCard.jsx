@@ -1,12 +1,13 @@
 import ResponsiveImage from "./ResponsiveImage";
 import projectClasses from "./ProjectCard.module.scss";
 import StyledButton from './StyledButton';
+import Link from "next/link";
 
 const ProjectCard = (props) => {
   const project = props.project;
 
   return (
-    <div className={projectClasses["project-card"]}>
+    <Link  data-scroll scroll={false} href={`/?project=${project.id}`} className={projectClasses["project-card"]}>
       <div className={projectClasses["project-card__image-wrap"]}>
         <ResponsiveImage
           className={projectClasses["project-card__image"]}
@@ -25,7 +26,7 @@ const ProjectCard = (props) => {
           <StyledButton href={project.github_url} className={projectClasses["project-card__link"]}>Read More</StyledButton>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
 

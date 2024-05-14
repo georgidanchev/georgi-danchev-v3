@@ -3,6 +3,7 @@ import clock from "../../assets/clock.svg";
 import ResponsiveImage from "./ResponsiveImage";
 import postClasses from "./BlogPosts.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogPost = (props) => {
   const blog_post = props.blog_post;
@@ -24,7 +25,7 @@ const BlogPost = (props) => {
   };
 
   return (
-    <div className={postClasses["blog-post"]}>
+    <Link as={`/?posts=${blog_post.id}`} href={`posts/${blog_post.id}`} className={postClasses["blog-post"]}>
       <div className={postClasses["blog-post__image-wrap"]}>
         <ResponsiveImage
           className={postClasses["blog-post__image"]}
@@ -48,7 +49,7 @@ const BlogPost = (props) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

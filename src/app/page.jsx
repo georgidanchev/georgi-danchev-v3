@@ -10,27 +10,25 @@ import FooterSection from "./sections/FooterSection.jsx";
 import HomeSection from "./sections/HomeSection";
 import store from "./redux/store";
 import Header from "./sections/Header.jsx";
-// import BlogSection from "./sections/BlogSection.jsx"
-// import ProjectsSection from "./sections/ProjectsSection";
+import BlogSection from "./sections/BlogSection.jsx";
+import ProjectsSection from "./sections/ProjectsSection";
+import DaisyModal from "./components/DaisyModal.jsx";
 
 function Home() {
   const containerRef = useRef(null);
   const locomotiveOptions = { speed: 3500, scrollFromAnywhere: true, multiplier: 1 };
 
   return (
-    <LocomotiveScrollProvider
-      options={locomotiveOptions}
-      containerRef={containerRef}
-      watch={[]}
-    >
+    <LocomotiveScrollProvider options={locomotiveOptions} containerRef={containerRef} watch={[]}>
       <Provider store={store}>
         <main data-scroll-container ref={containerRef}>
           <Header />
           <DotNavs />
+          <DaisyModal/>
           <HomeSection />
           <AboutSection />
-          {/* <ProjectsSection />
-          <BlogSection /> */}
+          <ProjectsSection />
+          <BlogSection />
           <ContactSection />
           <FooterSection />
         </main>
