@@ -2,7 +2,7 @@
 
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { Provider } from "react-redux";
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import AboutSection from "./sections/AboutSection";
 import ContactSection from "./sections/ContactSections.jsx";
 import DotNavs from "./components/DotNavs";
@@ -25,7 +25,9 @@ function Home() {
       <main data-scroll-container ref={containerRef}>
         <Header />
         <DotNavs />
-        <DaisyModal />
+        <Suspense>
+          <DaisyModal />
+        </Suspense>
         <HomeSection />
         <AboutSection />
         <ProjectsSection />
