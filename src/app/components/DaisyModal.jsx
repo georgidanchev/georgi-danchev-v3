@@ -2,26 +2,24 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const DaisyModal = () => {
-  const searchParams = useSearchParams();
+const DaisyModalWrapper = ({projectId}) => {
   const router = useRouter();
-  const projectId = searchParams.get("project");
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     if (projectId) {
-      setOpen(true)
+      setOpen(true);
     } else {
-      setOpen(false)
+      setOpen(false);
     }
-  },[projectId])
+  }, [projectId]);
 
   return (
     <dialog
       className="modal"
       open={isOpen}
       onClose={() => {
-        router.push("/", {scroll: false});
+        router.push("/", { scroll: false });
       }}
     >
       <div className="modal-box">
@@ -29,11 +27,11 @@ const DaisyModal = () => {
         <p className="py-4">Press ESC key or click outside to close</p>
         {projectId}
         <div className="modal-action">
-      <form method="dialog">
-        {/* if there is a button in form, it will close the modal */}
-        <button className="btn">Close</button>
-      </form>
-    </div>
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn">Close</button>
+          </form>
+        </div>
       </div>
 
       <form method="dialog" className="modal-backdrop">
@@ -43,4 +41,9 @@ const DaisyModal = () => {
   );
 };
 
-export default DaisyModal;
+export default function DaisyModal() {
+  const searchParams = useSearchParams();
+  const projectId = searchParams.get("project");
+
+  return <>{projectId && <DaisyModalWrapper projectId={projectId} />}</>;
+}

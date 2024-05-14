@@ -13,29 +13,26 @@ import Header from "./sections/Header.jsx";
 import BlogSection from "./sections/BlogSection.jsx";
 import ProjectsSection from "./sections/ProjectsSection";
 import DaisyModal from "./components/DaisyModal.jsx";
-import { useSearchParams } from "next/navigation";
+
 
 function Home() {
   const containerRef = useRef(null);
   const locomotiveOptions = { speed: 3500, scrollFromAnywhere: true, multiplier: 1 };
-  const searchParams = useSearchParams();
-  const projectId = searchParams.get("project");
+
 
   return (
     <LocomotiveScrollProvider options={locomotiveOptions} containerRef={containerRef} watch={[]}>
-      <Provider store={store}>
-        <main data-scroll-container ref={containerRef}>
-          <Header />
-          <DotNavs />
-          {projectId && <DaisyModal/>}
-          <HomeSection />
-          <AboutSection />
-          <ProjectsSection />
-          <BlogSection />
-          <ContactSection />
-          <FooterSection />
-        </main>
-      </Provider>
+      <main data-scroll-container ref={containerRef}>
+        <Header />
+        <DotNavs />
+        <DaisyModal />
+        <HomeSection />
+        <AboutSection />
+        <ProjectsSection />
+        <BlogSection />
+        <ContactSection />
+        <FooterSection />
+      </main>
     </LocomotiveScrollProvider>
   );
 }
