@@ -35,7 +35,7 @@ const Blog = () => {
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${blogClasses["blog"]}`}
       >
-        <SectionTitle subtitle="latest posts" title="My Blog Posts" link_title="see more posts" className="section-header--align-left-tablet-on" />
+        <SectionTitle subtitle="latest posts" title="My Blog Posts" />
         <div className={`${blogClasses["blog__content"]}`}>{blogPosts}</div>
       </div>
     </InView>

@@ -42,7 +42,6 @@ let projectsList = [];
         <SectionTitle
           title="My recent projects"
           subtitle="My portfolio"
-          className="section-header--align-left-tablet-on"
         />
 
         <div className={`${projectClasses["projects__cards-wrapper"]}`}>{projectsList}</div>
