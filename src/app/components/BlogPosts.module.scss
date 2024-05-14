@@ -29,6 +29,10 @@
     }
   }
 
+  &__subtitle {
+    color: var(--color-secondary);
+  }
+
   &__image-wrap {
     position: relative;
     height: 116px;
@@ -73,7 +77,7 @@
   }
 
   &__label-wraps {
-    margin-top: 22px;
+    margin-top: 12px;
     display: flex;
   }
 }

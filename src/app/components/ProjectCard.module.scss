@@ -3,7 +3,7 @@
 .project-card {
   background-color: var(--color-primary);
   border-radius: 6px;
-  min-height: 427px;
+  min-height: 354px;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -16,7 +16,8 @@
   }
 
   &__image {
-    border-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     height: 100%;
     left: 0;
     min-height: 308px;
@@ -27,11 +28,12 @@
   }
 
   &__content-wrap {
-    border-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     background-color: var(--color-primary);
     bottom: 0;
     left: 0;
-    padding: 25px 10px;
+    padding: 20px 10px 30px;
     position: absolute;
     width: 100%;
   }
@@ -46,7 +48,7 @@
     color: var(--color-secondary);
     font-size: rem(14);
     line-height: 1.18;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   &__text {

@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
       </div>
       <div className={projectClasses["project-card__content-wrap"]}>
         <h3 className={projectClasses["project-card__title"]}>{project.title}</h3>
-        <p className={projectClasses["project-card__tags"]}>{project.tagLine}</p>
+        <p className={projectClasses["project-card__tags"]}>{project.subtitle}</p>
       </div>
       <div className={projectClasses["project-card__overlay"]}>
         <h3 className={projectClasses["project-card__title"]}>{project.title}</h3>

@@ -38,6 +38,7 @@ const BlogPost = (props) => {
       </div>
       <div className={postClasses["blog-post__wrap"]}>
         <h3 className={postClasses["blog-post__title"]}>{blog_post.title}</h3>
+        <h3 className={postClasses["blog-post__subtitle"]}>{blog_post.subtitle}</h3>
         <div className={postClasses["blog-post__label-wraps"]}>
           <p className={postClasses["blog-post__label"]}>
             <Image className={postClasses["blog-post__icon"]} height="15" width="15" src={calendar} alt="calendar icon" />
