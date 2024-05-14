@@ -30,8 +30,8 @@ const BlogPost = (props) => {
         <ResponsiveImage
           className={postClasses["blog-post__image"]}
           code="v1629540938"
-          public_id={blog_post.img_name}
-          alt={blog_post.img_alt}
+          public_id={blog_post.imageId}
+          alt={blog_post.imageAlt}
           width="116"
           height="116"
         />
