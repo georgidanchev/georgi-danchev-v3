@@ -7,6 +7,7 @@ export const blogPosts = [
     subtitle: "Lorem ipsum dolor sit",
     text: "Lorem ipsum, dolor sit consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Blog post 1",
+    type: "Blog post",
     url: "",
   },
   {
@@ -17,6 +18,7 @@ export const blogPosts = [
     subtitle: "Lorem ipsum dolor sit",
     text: "Lorem ipsum, dolor sit consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Blog post 2",
+    type: "Blog post",
     url: "",
   },
   {
@@ -27,6 +29,7 @@ export const blogPosts = [
     subtitle: "Lorem ipsum dolor sit",
     text: "Lorem ipsum, dolor sit consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Blog post 3",
+    type: "Blog post",
     url: "",
   },
   {
@@ -37,6 +40,7 @@ export const blogPosts = [
     subtitle: "Lorem ipsum dolor sit",
     text: "Lorem ipsum, dolor sit consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Blog post 4",
+    type: "Blog post",
     url: "",
   },
 ];

@@ -7,6 +7,7 @@ export const projects = [
     subtitle: "SCSS, REACT, SOMETHING ELSE",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Project 1",
+    type: "Project",
     url: "",
   },
   {
@@ -17,6 +18,7 @@ export const projects = [
     subtitle: "SCSS, REACT, SOMETHING ELSE",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Project 2",
+    type: "Project",
     url: "",
   },
   {
@@ -27,6 +29,7 @@ export const projects = [
     subtitle: "SCSS, REACT, SOMETHING ELSE",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Project 3",
+    type: "Project",
     url: "",
   },
   {
@@ -37,6 +40,7 @@ export const projects = [
     subtitle: "SCSS, REACT, SOMETHING ELSE",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit eos deserunt ullam quidem? Blanditiis placeat deserunt eum! Illum, perspiciatis debitis!",
     title: "Project 4",
+    type: "Project",
     url: "",
   },
 ];
