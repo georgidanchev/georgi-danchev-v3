@@ -1,6 +1,6 @@
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const DaisyModalWrapper = ({projectId}) => {
   const router = useRouter();
@@ -45,5 +45,5 @@ export default function DaisyModal() {
   const searchParams = useSearchParams();
   const projectId = searchParams.get("project");
 
-  return <>{projectId && <DaisyModalWrapper projectId={projectId} />}</>;
+  return <Suspense>{projectId && <DaisyModalWrapper projectId={projectId} />}</Suspense>;
 }
