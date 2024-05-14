@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   return (
-    <InView threshold={0.25} as="section" id="home" className={sectClasses["section"]} onChange={isInView} data-scroll-section>
+    <InView threshold={0.5} as="section" id="home" className={sectClasses["section"]} onChange={isInView} data-scroll-section>
       <div
         className={`${homeClasses["home-section"]} ${sectClasses["section-width"]} ${sectClasses["section-width--padding"]} animate__animated animate__zoomInDown`}
         data-scroll

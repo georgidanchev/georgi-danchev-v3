@@ -9,7 +9,9 @@ import DotNavs from "./components/DotNavs";
 import FooterSection from "./sections/FooterSection.jsx";
 import HomeSection from "./sections/HomeSection";
 import store from "./redux/store";
-import WebsiteHeader from "./header/WebsiteHeader";
+import Header from "./sections/Header.jsx";
+// import BlogSection from "./sections/BlogSection.jsx"
+// import ProjectsSection from "./sections/ProjectsSection";
 
 function Home() {
   const containerRef = useRef(null);
@@ -23,10 +25,12 @@ function Home() {
     >
       <Provider store={store}>
         <main data-scroll-container ref={containerRef}>
-          <WebsiteHeader />
+          <Header />
           <DotNavs />
           <HomeSection />
           <AboutSection />
+          {/* <ProjectsSection />
+          <BlogSection /> */}
           <ContactSection />
           <FooterSection />
         </main>

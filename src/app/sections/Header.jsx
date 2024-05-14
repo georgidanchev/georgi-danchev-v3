@@ -1,8 +1,8 @@
-import MobileBtn from "./MobileBtn";
-import MobileNav from "./MobileNav";
-import SocialLinks from "./SocialLinks";
+import MobileBtn from "../components/MobileBtn";
+import MobileNav from "../components/MobileNav";
+import SocialLinks from "../components/SocialLinks";
 import NameTitle from "../components/NameTitle.jsx";
-import classes from "./WebsiteHeader.module.scss";
+import classes from "./Header.module.scss";
 import sectClasses from "../styles/shared/Sections.module.scss";
 
 const Header = () => {

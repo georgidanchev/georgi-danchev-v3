@@ -1,0 +1,28 @@
+@import "../styles/mixin/shared.scss";
+
+.projects {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+
+  &__cards-wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+    @include media("<desktop-large") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media("<mobile-large") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cta {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -122,12 +122,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 html {
   scroll-behavior: smooth;
-  @include media(">tablet") {
-    scroll-snap-type: y proximity;
-    overscroll-behavior-y: contain;
-    overflow-y: scroll;
-    height: 100dvh;
-  }
+  // @include media(">tablet") {
+  //   scroll-snap-type: y proximity;
+  //   overscroll-behavior-y: contain;
+  //   overflow-y: scroll;
+  //   height: 100dvh;
+  // }
 }
 
 .visually-hidden {

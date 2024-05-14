@@ -157,7 +157,7 @@ const ContactSection = ({ children }) => {
   };
 
   return (
-    <InView threshold={0.25} as="section" className={SectionClasses["section"]} onChange={isInView}>
+    <InView threshold={0.5} as="section" className={SectionClasses["section"]} onChange={isInView}>
       <div
         id="contact"
         data-scroll-section
