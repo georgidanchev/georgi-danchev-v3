@@ -1,4 +1,4 @@
-import { projects } from "../data";
+import { projects } from "../../myProjects/projectsData";
 
 export async function GET(_request, { params }) {
   console.log(params);

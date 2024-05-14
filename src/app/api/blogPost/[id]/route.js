@@ -1,4 +1,4 @@
-import { blogPosts } from "../data";
+import { blogPosts } from "../../blogPosts/blogData";
 
 export async function GET(_request, { params }) {
   console.log(params);

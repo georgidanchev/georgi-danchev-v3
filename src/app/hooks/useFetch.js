@@ -41,7 +41,7 @@ export async function getAllProjects() {
 }
 
 export async function getSingleProject(id) {
-  const response = await fetch(`/api/myProjects/${id}`)
+  const response = await fetch(`/api/myProject/${id}`)
   const resData = await response.json()
 
   if (!response.ok) {
@@ -63,7 +63,7 @@ export async function getAllBlogPosts() {
 }
 
 export async function getSingleBlogPost(id) {
-  const response = await fetch(`/api/blogPosts/${id}`)
+  const response = await fetch(`/api/blogPost/${id}`)
   const resData = await response.json()
 
   if (!response.ok) {
