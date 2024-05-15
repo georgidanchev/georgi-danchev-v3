@@ -10,8 +10,8 @@ import FooterSection from "./sections/FooterSection.jsx";
 import HomeSection from "./sections/HomeSection";
 import store from "./redux/store";
 import Header from "./sections/Header.jsx";
-import BlogSection from "./sections/BlogSection.jsx";
-import ProjectsSection from "./sections/ProjectsSection";
+// import BlogSection from "./sections/BlogSection.jsx";
+// import ProjectsSection from "./sections/ProjectsSection";
 import DaisyModal from "./components/DaisyModal.jsx";
 
 
@@ -29,8 +29,8 @@ function Home() {
         </Suspense>
         <HomeSection />
         <AboutSection />
-        <ProjectsSection />
-        <BlogSection />
+        {/* <ProjectsSection /> */}
+        {/* <BlogSection /> */}
         <ContactSection />
         <FooterSection />
       </main>
