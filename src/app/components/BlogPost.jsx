@@ -3,6 +3,7 @@ import clock from "../../assets/clock.svg";
 import ResponsiveImage from "./ResponsiveImage";
 import postClasses from "./BlogPosts.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogPost = (props) => {
   const blog_post = props.blog_post;
@@ -24,19 +25,20 @@ const BlogPost = (props) => {
   };
 
   return (
-    <div className={postClasses["blog-post"]}>
+    <Link scroll={false} href={`/?post-id=${blog_post.id}`} className={postClasses["blog-post"]}>
       <div className={postClasses["blog-post__image-wrap"]}>
         <ResponsiveImage
           className={postClasses["blog-post__image"]}
           code="v1629540938"
-          public_id={blog_post.img_name}
-          alt={blog_post.img_alt}
+          public_id={blog_post.imageId}
+          alt={blog_post.imageAlt}
           width="116"
           height="116"
         />
       </div>
       <div className={postClasses["blog-post__wrap"]}>
         <h3 className={postClasses["blog-post__title"]}>{blog_post.title}</h3>
+        <h3 className={postClasses["blog-post__subtitle"]}>{blog_post.subtitle}</h3>
         <div className={postClasses["blog-post__label-wraps"]}>
           <p className={postClasses["blog-post__label"]}>
             <Image className={postClasses["blog-post__icon"]} height="15" width="15" src={calendar} alt="calendar icon" />
@@ -48,7 +50,7 @@ const BlogPost = (props) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

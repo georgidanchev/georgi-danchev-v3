@@ -1,16 +1,17 @@
 import { InView } from "react-intersection-observer";
 import { setSectionInView } from "../redux/navReducer";
 import { useDispatch } from "react-redux";
-import data_portfolio from "../../assets/data-portfolio.json";
 import DecorativeBorder from "../components/DecorativeBorder.jsx";
 import ProjectCard from "../components/ProjectCard.jsx";
 import projectClasses from "./ProjectsSection.module.scss";
 import ResponsiveImage from "../components/ResponsiveImage.jsx";
 import sectionClasses from "../styles/shared/Sections.module.scss";
 import SectionTitle from "../components/SectionTitle.jsx";
+import useFetch, { getAllProjects } from "../hooks/useFetch";
 
 const ProjectsSection = () => {
-  let projectsList = [];
+let projectsList = [];
+  const { isFetching, error, fetchedData } = useFetch(getAllProjects, []);
 
   const dispatch = useDispatch();
 
@@ -20,7 +21,7 @@ const ProjectsSection = () => {
     }
   };
 
-  data_portfolio.forEach((project) => {
+  fetchedData.forEach((project) => {
     projectsList.push(<ProjectCard key={project.id} project={project} />);
   });
 
@@ -38,13 +39,12 @@ const ProjectsSection = () => {
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${sectionClasses["section-width--bordered-top"]} ${sectionClasses["section-width--bordered-bottom"]} ${projectClasses["projects"]}`}
       >
-        <SectionTitle title="My recent projects" subtitle="My portfolio" className="section-header--align-left-tablet-on" />
+        <SectionTitle
+          title="My recent projects"
+          subtitle="My portfolio"
+        />
 
         <div className={`${projectClasses["projects__cards-wrapper"]}`}>{projectsList}</div>
-
-        {/* <a className="btn projects__cta" href={process.env.REACT_APP_GITHUB} target="_blank" rel="noreferrer">
-          See more projects
-        </a> */}
       </div>
 
       <div className={sectionClasses["section__bg-image-wrapper"]}>

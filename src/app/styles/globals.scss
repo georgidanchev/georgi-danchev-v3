@@ -27,13 +27,13 @@
   --color-danger: rgba(255, 14, 14, 0.7);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --foreground-rgb: 255, 255, 255;
+//     --background-start-rgb: 0, 0, 0;
+//     --background-end-rgb: 0, 0, 0;
+//   }
+// }
 
 *,
 *::after,
@@ -48,6 +48,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--color-primary);
+  color: var(--color-white);
 
   font-family: "Playfair Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -153,3 +154,12 @@ html {
 .animate__fadeIn {
   opacity: 1;
 }
+
+.modal-backdrop {
+  background-color: rgb(0,0,0,0.5);
+}
+
+.modal-box {
+  background-color: var(--color-primary);
+}
+
