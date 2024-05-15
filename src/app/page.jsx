@@ -29,8 +29,8 @@ function Home() {
         </Suspense>
         <HomeSection />
         <AboutSection />
-        <ProjectsSection />
-        <BlogSection />
+        {/* <ProjectsSection /> */}
+        {/* <BlogSection /> */}
         <ContactSection />
         <FooterSection />
       </main>
