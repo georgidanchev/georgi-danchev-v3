@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 const StyledDownArrow = styled.a`
   position: absolute;
-  transform: translateX(-50%);
   bottom: 20vh;
   z-index: 3;
   left: 50%;
@@ -21,6 +20,7 @@ const StyledDownArrow = styled.a`
   .down-arrow__image {
     width: 30px;
     height: 30px;
+    transform: translateX(-50%);
 
     @media only screen and (min-width: 590px) {
       width: 50px;
