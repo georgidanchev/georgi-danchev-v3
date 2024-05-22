@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.10.2",
     "react-locomotive-scroll": "^0.2.2"
   },
   "devDependencies": {
-    "@reduxjs/toolkit": "^2.2.4",
+    "@reduxjs/toolkit": "^2.2.5",
     "@types/node": "20.12.12",
     "@types/react": "18.3.2",
     "animate.css": "^4.1.1",
@@ -24,11 +24,11 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.3",
     "include-media": "^2.0.0",
-    "postcss": "^8",
+    "postcss": "^8.4.38",
     "postcss-reporter": "^7.1.0",
     "react-redux": "^9.1.2",
-    "sass": "^1.77.1",
-    "styled-components": "^6.1.11",
+    "sass": "^1.77.2",
+    "styled-components": "^5.3.11",
     "tailwindcss": "^3.4.3"
   },
   "browserslist": {
@@ -46,5 +46,5 @@
   "resolutions": {
     "styled-components": "^5"
   },
-  "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724"
+  "packageManager": "pnpm@9.1.2+sha512.127dc83b9ea10c32be65d22a8efb4a65fb952e8fefbdfded39bdc3c97efc32d31b48b00420df2c1187ace28c921c902f0cb5a134a4d032b8b5295cbfa2c681e2"
 }
