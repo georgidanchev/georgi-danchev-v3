@@ -1,18 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import useFetch, { getAllBlogPosts } from "../hooks/useFetch";
+const { isFetching, error, fetchedData } = getAllBlogPosts;
+
+
 export const blogSlice = createSlice({
   name: "blog",
   initialState: {
     data: [],
   },
   reducers: {
-    getBlogData: (state, action) => {
+    setBlogData: (state, action) => {
       const newData = action.payload;
       state.data = newData;
     },
   },
 });
 
-export const { menuSlice } = blogSlice.actions
+export const blogActions = blogSlice.actions
 
 export default blogSlice.reducer

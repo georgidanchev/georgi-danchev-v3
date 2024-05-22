@@ -2,8 +2,9 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import StyledButton from './StyledButton';
+import { useSelector } from "react-redux";
 
-const DaisyModalWrapper = () => {
+const DaisyModalWrapper = ({contentID}) => {
   const router = useRouter();
 
   return (
@@ -25,7 +26,7 @@ const DaisyModalWrapper = () => {
             <StyledButton className="padding !py-2 !px-4">close</StyledButton>
           </form>
         </div>
-        <p>stuff</p>
+        <p>{contentID}</p>
       </div>
 
       <form method="dialog" className="modal-backdrop">
@@ -37,13 +38,11 @@ const DaisyModalWrapper = () => {
 
 export default function DaisyModal() {
   const searchParams = useSearchParams();
-  const projectId = searchParams.get("project-id");
-  const postId = searchParams.get("post-id");
+  const contentID = searchParams.get("project-id") ? searchParams.get("project-id") : searchParams.get("post-id");
 
   return (
     <>
-      {projectId && <DaisyModalWrapper projectId={projectId} />}
-      {postId && <DaisyModalWrapper projectId={projectId} />}
+      {contentID && <DaisyModalWrapper contentID={contentID} />}
     </>
   );
 }

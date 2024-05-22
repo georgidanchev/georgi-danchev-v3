@@ -4,27 +4,29 @@ import sectionClasses from "../styles/shared/Sections.module.scss";
 import blogClasses from "./BlogSection.module.scss";
 
 // import { getBlogData } from "../redux/blogReducer";
-import { InView } from 'react-intersection-observer';
+import { InView } from "react-intersection-observer";
 import { setSectionInView } from "../redux/navReducer";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import useFetch, { getAllBlogPosts } from "../hooks/useFetch";
+// import { blogActions } from "../redux/blogReducer";
 
 const Blog = () => {
-  const { isFetching, error, fetchedData } = useFetch(getAllBlogPosts, []);
+  const dispatch = useDispatch();
+
+
+  // dispatch(blogActions.setBlogData(fetchedData));
 
   let blogPosts = [];
 
-  const dispatch = useDispatch();
+  fetchedData.forEach((blog_post) => {
+    blogPosts.push(<BlogPost key={blog_post.id} blog_post={blog_post} />);
+  });
 
   const isInView = (inView) => {
     if (inView) {
       dispatch(setSectionInView("blog"));
     }
   };
-
-  fetchedData.forEach((blog_post) => {
-    blogPosts.push(<BlogPost key={blog_post.id} blog_post={blog_post} />);
-  });
 
   return (
     <InView
