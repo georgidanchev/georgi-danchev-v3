@@ -44,7 +44,6 @@ const Blog = () => {
           {!blogState.loading && blogState.data
             ? blogState.data.map((blogPost) => <BlogPost key={blogPost.id} blog_post={blogPost} />)
             : null}
-          {/* {blogPosts} */}
         </div>
       </div>
     </InView>

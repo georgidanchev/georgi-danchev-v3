@@ -1,29 +1,29 @@
 import { InView } from "react-intersection-observer";
 import { setSectionInView } from "../redux/navReducer";
-import { useDispatch } from "react-redux";
 import DecorativeBorder from "../components/DecorativeBorder.jsx";
 import ProjectCard from "../components/ProjectCard.jsx";
 import projectClasses from "./ProjectsSection.module.scss";
 import ResponsiveImage from "../components/ResponsiveImage.jsx";
 import sectionClasses from "../styles/shared/Sections.module.scss";
 import SectionTitle from "../components/SectionTitle.jsx";
-import useFetch, { getAllProjects } from "../hooks/useFetch";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchProjectsData } from "../redux/projectsReducer";
 
 const ProjectsSection = () => {
-let projectsList = [];
-  const { isFetching, error, fetchedData } = useFetch(getAllProjects, []);
+  const projectsState = useSelector((state) => state.projects);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProjectsData());
+  }, [dispatch]);
 
   const isInView = (inView) => {
     if (inView) {
       dispatch(setSectionInView("projects"));
     }
   };
-
-  fetchedData.forEach((project) => {
-    projectsList.push(<ProjectCard key={project.id} project={project} />);
-  });
 
   return (
     <InView
@@ -39,12 +39,17 @@ let projectsList = [];
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${sectionClasses["section-width--bordered-top"]} ${sectionClasses["section-width--bordered-bottom"]} ${projectClasses["projects"]}`}
       >
-        <SectionTitle
-          title="My recent projects"
-          subtitle="My portfolio"
-        />
+        <SectionTitle title="My recent projects" subtitle="My portfolio" />
 
-        <div className={`${projectClasses["projects__cards-wrapper"]}`}>{projectsList}</div>
+        <div className={`${projectClasses["projects__cards-wrapper"]}`}>
+          {projectsState.loading && <p>Loading...</p>}
+
+          {!projectsState.loading && projectsState.error ? <p>Error: {projectsState.error}</p> : null}
+
+          {!projectsState.loading && projectsState.data
+            ? projectsState.data.map((project) => <ProjectCard key={project.id} project={project} />)
+            : null}
+        </div>
       </div>
 
       <div className={sectionClasses["section__bg-image-wrapper"]}>
