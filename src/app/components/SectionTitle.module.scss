@@ -6,46 +6,46 @@
   @include media(">tablet") {
     margin-bottom: 100px;
   }
+}
 
-  &--w-t-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.section-header--w-t-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    @include media("<tablet") {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-
-  &--align-left-tablet-on p,
-  &--align-left-tablet-on h2 {
-    @include media(">tablet") {
-      text-align: start;
-    }
-  }
-
-  &__subheading {
-    @include fluid-type(350px, 768px, 16px, 26px);
-    font-weight: bold;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: var(--color-secondary);
-    margin-bottom: 10px;
-    text-align: center
-  }
-
-  &__heading {
-    @include fluid-type(350px, 768px, 31px, 55px);
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 1.333;
+  @include media("<tablet") {
+    flex-direction: column;
     text-align: center;
   }
+}
 
-  &__btn {
-    @include media("<tablet") {
-      margin-top: 15px;
-    }
+.section-header--align-left-tablet-on p,
+.section-header--align-left-tablet-on h2 {
+  @include media(">tablet") {
+    text-align: start;
+  }
+}
+
+.section-header__subheading {
+  @include fluid-type(350px, 768px, 16px, 26px);
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+  text-align: center
+}
+
+.section-header__heading {
+  @include fluid-type(350px, 768px, 31px, 55px);
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.333;
+  text-align: center;
+}
+
+.section-header__btn {
+  @include media("<tablet") {
+    margin-top: 15px;
   }
 }

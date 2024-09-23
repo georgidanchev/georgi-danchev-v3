@@ -28,13 +28,11 @@
   font-weight: bold;
 }
 
-.nameTitle--header {
-  .nameTitle__inner {
-    @include media("<tablet") {
-      width: 25px;
-      overflow: hidden;
-      display: inline-block;
-    }
+.nameTitle--header .nameTitle__inner {
+  @include media("<tablet") {
+    width: 25px;
+    overflow: hidden;
+    display: inline-block;
   }
 }
 
