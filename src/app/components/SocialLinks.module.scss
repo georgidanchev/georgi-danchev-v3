@@ -2,23 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  &__list-item:not(:first-child) {
-    margin-left: 20px;
-  }
+.social-links__list-item:not(:first-child) {
+  margin-left: 20px;
+}
 
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.social-links__link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 
-    &:hover svg,
-    &:focus svg {
-      stroke: var(--color-secondary);
-    }
-  }
+.social-links__link:hover svg,
+.social-links__link:focus svg {
+  stroke: var(--color-secondary);
+}
 
-  &__icon {
-    transition: stroke 300ms ease;
-  }
+.social-links__icon {
+  transition: stroke 300ms ease;
 }

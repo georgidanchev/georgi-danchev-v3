@@ -8,20 +8,19 @@
   top: 0;
   z-index: 6;
 
-    @include media("<mobile-large") {
-      padding-top: 15px;
-    }
-
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+  @include media("<mobile-large") {
+    padding-top: 15px;
   }
+}
 
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-  }
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }

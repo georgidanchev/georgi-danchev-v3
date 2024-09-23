@@ -13,10 +13,10 @@
   padding: 17px 25px 15px;
   text-align: center;
   text-transform: uppercase;
+}
 
-  &:hover,
-  &:focus {
-    background-color: var(--color-secondary);
-    outline: none;
-  }
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-secondary);
+  outline: none;
 }

@@ -8,63 +8,59 @@
   text-align: center;
   position: relative;
   z-index: 4;
+}
 
-  &__title {
-    font-weight: bold;
-    line-height: 1;
-    margin-top: 0;
-    margin-bottom: 3px;
-
-    @include media(">=desktop-larger") {
-      margin-bottom: 10px;
-    }
+.home-section__title {
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 3px;
+  @include media(">=desktop-larger") {
+    margin-bottom: 10px;
   }
+}
 
-  &__title-inner {
-    @include media("<desktop-larger") {
-      display: block;
-    }
-
-    &--first {
-      @include fluid-type(500px, 1600px, 41px, 62px);
-    }
-
-    &--second {
-      @include fluid-type(500px, 1600px, 31px, 62px);
-    }
-
-    &--first,
-    &--second {
-      @include media("<desktop-larger") {
-        margin-bottom: 10px;
-      }
-    }
+.home-section__title-inner {
+  @include media("<desktop-larger") {
+    display: block;
   }
+}
 
-  &__title-spacer {
-    @include fluid-type(500px, 1600px, 41px, 62px);
-    color: var(--color-secondary);
-    margin-right: 17px;
-    margin-left: 17px;
-
-    @include media("<desktop-larger") {
-      display: none;
-    }
+.home-section__title-inner--first {
+  @include fluid-type(500px, 1600px, 41px, 62px);
+  @include media("<desktop-larger") {
+    margin-bottom: 10px;
   }
+}
 
-  &__text {
-    @include fluid-type(500px, 1600px, 16px, 26px);
-    line-height: 1.33;
-
-    @include media("<desktop-large") {
-      margin-right: auto;
-      margin-left: auto;
-      max-width: 300px;
-    }
+.home-section__title-inner--second {
+  @include fluid-type(500px, 1600px, 31px, 62px);
+  @include media("<desktop-larger") {
+    margin-bottom: 10px;
   }
+}
 
-  &__title,
-  &__text {
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+.home-section__title-spacer {
+  @include fluid-type(500px, 1600px, 41px, 62px);
+  color: var(--color-secondary);
+  margin-right: 17px;
+  margin-left: 17px;
+  @include media("<desktop-larger") {
+    display: none;
   }
+}
+
+.home-section__text {
+  @include fluid-type(500px, 1600px, 16px, 26px);
+  line-height: 1.33;
+  @include media("<desktop-large") {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+  }
+}
+
+.home-section__title,
+.home-section__text {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
