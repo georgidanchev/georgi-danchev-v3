@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const fetchBlogData = createAsyncThunk("api/blogPosts", () => {
-  return fetch("/api/blogPosts")
+export const fetchProjectsData = createAsyncThunk("/api/myProjects", () => {
+  return fetch("/api/myProjects")
     .then((res) => res.json())
     .then((data) => data);
 });
@@ -12,7 +12,7 @@ const initialState = {
   error: "",
 };
 
-export const blogSlice = createSlice({
+export const projectSlice = createSlice({
   name: "blog",
   initialState,
   // reducers: {
@@ -23,15 +23,15 @@ export const blogSlice = createSlice({
   // },
 
   extraReducers: (builder) => {
-    builder.addCase(fetchBlogData.pending, (state) => {
+    builder.addCase(fetchProjectsData.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(fetchBlogData.fulfilled, (state, action) => {
+    builder.addCase(fetchProjectsData.fulfilled, (state, action) => {
       state.loading = false;
       state.data = action.payload
       state.error = ""
     });
-    builder.addCase(fetchBlogData.rejected, (state, action) => {
+    builder.addCase(fetchProjectsData.rejected, (state, action) => {
       state.loading = false;
       state.data = []
       state.error = action.error.message
@@ -39,6 +39,6 @@ export const blogSlice = createSlice({
   },
 });
 
-// export const blogActions = blogSlice.actions;
+// export const blogActions = projectSlice.actions;
 
-export default blogSlice.reducer;
+export default projectSlice.reducer;
