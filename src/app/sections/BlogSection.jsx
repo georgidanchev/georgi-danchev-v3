@@ -35,8 +35,8 @@ const Blog = () => {
       <div
         className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${blogClasses["blog"]}`}
       >
-        <SectionTitle subtitle="latest posts" title="My Blog Posts" />
-        <div className={`${blogClasses["blog__content"]}`}>
+        <SectionTitle subtitle="latest posts" title="Coming soon..." />
+        {/* <div className={`${blogClasses["blog__content"]}`}>
           {blogState.loading && <p>Loading...</p>}
 
           {!blogState.loading && blogState.error ? <p>Error: {blogState.error}</p> : null}
@@ -44,7 +44,7 @@ const Blog = () => {
           {!blogState.loading && blogState.data
             ? blogState.data.map((blogPost) => <BlogPost key={blogPost.id} blog_post={blogPost} />)
             : null}
-        </div>
+        </div> */}
       </div>
     </InView>
   );
