@@ -2,7 +2,7 @@
 
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { Provider } from "react-redux";
-import { Suspense, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import AboutSection from "./sections/AboutSection";
 import ContactSection from "./sections/ContactSections.jsx";
 import DotNavs from "./components/DotNavs";
@@ -13,11 +13,16 @@ import Header from "./sections/Header.jsx";
 import BlogSection from "./sections/BlogSection.jsx";
 import ProjectsSection from "./sections/ProjectsSection";
 import DaisyModal from "./components/DaisyModal.jsx";
-
+import { clarity } from 'react-microsoft-clarity';
 
 function Home() {
   const containerRef = useRef(null);
   const locomotiveOptions = { speed: 3500, scrollFromAnywhere: true, multiplier: 1 };
+
+  useEffect(() => {
+    clarity.init("o8anyz9e68");
+    clarity.consent();
+  }, [])
 
   return (
     <LocomotiveScrollProvider options={locomotiveOptions} containerRef={containerRef} watch={[]}>
