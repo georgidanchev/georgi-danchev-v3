@@ -57,7 +57,7 @@ const Home = () => {
 
       {/* <Particles id="tsparticles" options={particleConfig} init={particlesInit} /> */}
 
-      {/* <DownArrowLink /> */}
+      <DownArrowLink />
 
       <DecorativeBorder location="bottom" />
     </InView>

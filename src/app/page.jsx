@@ -27,17 +27,17 @@ function Home() {
   return (
     <LocomotiveScrollProvider options={locomotiveOptions} containerRef={containerRef} watch={[]}>
       <main data-scroll-container ref={containerRef}>
-        {/* <Header /> */}
-        {/* <DotNavs /> */}
-        {/* <Suspense>
+        <Header />
+        <DotNavs />
+        <Suspense>
           <DaisyModal />
-        </Suspense> */}
+        </Suspense>
         <HomeSection />
-        {/* <AboutSection /> */}
-        {/* <ProjectsSection /> */}
-        {/* <BlogSection /> */}
-        {/* <ContactSection /> */}
-        {/* <FooterSection /> */}
+        <AboutSection />
+        <ProjectsSection />
+        <BlogSection />
+        <ContactSection />
+        <FooterSection />
       </main>
     </LocomotiveScrollProvider>
   );
