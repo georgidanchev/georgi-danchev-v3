@@ -27,16 +27,16 @@ const Blog = () => {
     <InView
       id="blog"
       as="section"
-      className={sectionClasses["section"]}
+      className={sectionClasses.section}
       data-scroll-section
       onChange={isInView}
       threshold={0.5}
     >
       <div
-        className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${blogClasses["blog"]}`}
+        className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${blogClasses.blog}`}
       >
         <SectionTitle subtitle="latest posts" title="Coming soon..." />
-        {/* <div className={`${blogClasses["blog__content"]}`}>
+        <div className={`${blogClasses.blog__content}`}>
           {blogState.loading && <p>Loading...</p>}
 
           {!blogState.loading && blogState.error ? <p>Error: {blogState.error}</p> : null}
@@ -44,7 +44,7 @@ const Blog = () => {
           {!blogState.loading && blogState.data
             ? blogState.data.map((blogPost) => <BlogPost key={blogPost.id} blog_post={blogPost} />)
             : null}
-        </div> */}
+        </div>
       </div>
     </InView>
   );

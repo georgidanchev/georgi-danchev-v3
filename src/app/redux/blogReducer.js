@@ -1,9 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const fetchBlogData = createAsyncThunk("api/blogPosts", () => {
-  return fetch("/api/blogPosts")
-    .then((res) => res.json())
-    .then((data) => data);
+export const fetchBlogData = createAsyncThunk("api/blogPosts", async (_, thunkAPI) => {
+  try {
+    const res = await fetch("/api/blogPosts");
+    if (!res.ok) throw new Error(`Fetch failed with status ${res.status}`);
+    return await res.json();
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err.message);
+  }
 });
 
 const initialState = {

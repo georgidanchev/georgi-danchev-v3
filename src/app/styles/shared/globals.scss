@@ -1,13 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-@import "./libraries/animate.css";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-// mixins, variables, scss specific libraries etc
-@import "./mixin/shared.scss";
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -35,15 +25,13 @@
 //   }
 // }
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-
+// *,
+// *::after,
+// *::before {
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+// }
 
 body {
   color: rgb(var(--foreground-rgb));
