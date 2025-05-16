@@ -30,18 +30,18 @@ const ProjectsSection = () => {
       threshold={0.5}
       id="projects"
       as="section"
-      className={`${sectionClasses["section"]} ${sectionClasses["section--projects"]}`}
+      className={`${sectionClasses.section} ${sectionClasses["section--projects"]}`}
       data-scroll-section
       onChange={isInView}
     >
       <DecorativeBorder location="top" />
 
       <div
-        className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${sectionClasses["section-width--bordered-top"]} ${sectionClasses["section-width--bordered-bottom"]} ${projectClasses["projects"]}`}
+        className={`${sectionClasses["section-width"]} ${sectionClasses["section-width--padding"]} ${sectionClasses["section-width--bordered-top"]} ${sectionClasses["section-width--bordered-bottom"]} ${projectClasses.projects}`}
       >
         <SectionTitle title="Coming soon..." subtitle="My portfolio" />
 
-        {/* <div className={`${projectClasses["projects__cards-wrapper"]}`}>
+        <div className={`${projectClasses["projects__cards-wrapper"]}`}>
           {projectsState.loading && <p>Loading...</p>}
 
           {!projectsState.loading && projectsState.error ? <p>Error: {projectsState.error}</p> : null}
@@ -49,7 +49,7 @@ const ProjectsSection = () => {
           {!projectsState.loading && projectsState.data
             ? projectsState.data.map((project) => <ProjectCard key={project.id} project={project} />)
             : null}
-        </div> */}
+        </div>
       </div>
 
       <div className={sectionClasses["section__bg-image-wrapper"]}>

@@ -13,9 +13,6 @@ import { setSectionInView } from "../redux/navReducer";
 import { InView } from "react-intersection-observer";
 
 const ContactSection = ({ children }) => {
-  // const ref_contact = useRef()
-  // useIntersection(ref_contact, "contact")
-
   const dispatch = useDispatch()
 
   const isInView = (inView) => {
@@ -26,6 +23,11 @@ const ContactSection = ({ children }) => {
 
   const submitBtn = React.createRef();
   let [formSubmitted, isFormSubmitted] = useState(false);
+  const [inputStates, setInputStates] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
 
   const btnStates = {
     error: "error",
@@ -34,11 +36,11 @@ const ContactSection = ({ children }) => {
   };
 
   const toggleActiveField = (e) => {
-    if (e.target.value === "") {
-      e.target.parentNode.classList.remove("active");
-    } else {
-      e.target.parentNode.classList.add("active");
-    }
+    const id = e.target.id;
+    setInputStates((prev) => ({
+      ...prev,
+      [id]: e.target.value.length > 0,
+    }));
   };
 
   const escapeString = (string) => {
@@ -78,7 +80,6 @@ const ContactSection = ({ children }) => {
         break;
       case btnStates.sending:
         submitBtn.current.innerText = "Sending...";
-        // submitBtn.current.disabled = true
         break;
       case btnStates.sent:
         submitBtn.current.innerText = "Sent!";
@@ -189,7 +190,7 @@ const ContactSection = ({ children }) => {
 
               {formSubmitted === false ? (
                 <React.Fragment>
-                  <div className={`${ContactClasses["contact-form__input-group"]}`}>
+                  <div className={`${ContactClasses["contact-form__input-group"]} ${inputStates["name"] ? ContactClasses["active"] : ""}`}>
                     <input
                       className={`${ContactClasses["contact-form__input"]}`}
                       type="text"
@@ -201,7 +202,7 @@ const ContactSection = ({ children }) => {
                       Your name
                     </label>
                   </div>
-                  <div className={`${ContactClasses["contact-form__input-group"]}`}>
+                  <div className={`${ContactClasses["contact-form__input-group"]} ${inputStates["email"] ? ContactClasses["active"] : ""}`}>
                     <input
                       className={`${ContactClasses["contact-form__input"]}`}
                       type="email"
@@ -214,7 +215,7 @@ const ContactSection = ({ children }) => {
                       Your email
                     </label>
                   </div>
-                  <div className={`${ContactClasses["contact-form__input-group"]}`}>
+                  <div className={`${ContactClasses["contact-form__input-group"]} ${inputStates["message"] ? ContactClasses["active"] : ""}`}>
                     <textarea
                       className={`${ContactClasses["contact-form__textarea"]}`}
                       data-name="text"

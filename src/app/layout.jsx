@@ -1,7 +1,4 @@
-// import { Inter } from "nee={inter.classNxt/font/google";
-import "./styles/globals.scss";
-
-// const inter = Inter({ subsets: ["latin"] });
+import "./styles/app.scss";
 
 export const metadata = {
   title: "Georgi | Front End Developer",
